@@ -145,6 +145,7 @@ class PostgresTransactionRepository(
             }
         }
 
+
         val transactions = jdbcTemplate.query(sql, params, transactionRowMapper)
         logger.info("Found {} transactions for merchant {}, status = {}", transactions.size, merchantId, status)
         return transactions
