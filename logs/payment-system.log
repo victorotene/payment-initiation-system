@@ -5678,3 +5678,11 @@ WHERE id = ANY(?)
 2025-07-28 12:15:43.469 [http-nio-8080-exec-10] INFO  [c.p.c.p.c.SettlementController] - Successfully settled 4 transactions into batch d9c652d4-2708-4193-808a-17bb5e691d5c
 2025-07-28 12:17:15.765 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
 2025-07-28 12:17:15.767 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 12:52:51.079 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 89515 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 12:52:51.080 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 12:52:51.993 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 12:52:51.993 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 12:52:51.994 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 12:52:52.010 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.098 seconds (process running for 2.061)
+2025-07-28 12:52:52.333 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 12:52:52.336 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 299ac490-3b90-4e5a-8fb7-bddcc579a2f1
