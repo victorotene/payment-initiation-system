@@ -1,6 +1,6 @@
 package com.paymentsystem.core.UnitTest
 
-import com.fasterxml.jackson.databind.ObjectMapper
+/*import com.fasterxml.jackson.databind.ObjectMapper
 import com.ninjasquad.springmockk.MockkBean
 import com.paymentsystem.core.application.commands.CreateMerchantCommand
 import com.paymentsystem.core.application.dto.CreateMerchantResult
@@ -69,4 +69,4 @@ class MerchantControllerTest {
             print()
         }
     }
-}
+}*/

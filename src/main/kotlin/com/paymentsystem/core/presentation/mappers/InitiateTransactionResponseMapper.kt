@@ -11,7 +11,6 @@ class InitiateTransactionResponseMapper {
             id = result.id,
             merchantId = result.merchantId,
             merchantRef = result.merchantRef,
-            internalRef = result.internalRef,
             amount = result.amount,
             currency = result.currency,
             fee = result.fee,

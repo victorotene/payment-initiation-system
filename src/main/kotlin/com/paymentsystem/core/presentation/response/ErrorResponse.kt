@@ -5,5 +5,5 @@ import java.time.ZonedDateTime
 data class ErrorResponse(
     val message: String,
     val code: String,
-    val timestamp: ZonedDateTime?
+    val timestamp: ZonedDateTime = ZonedDateTime.now()
 )

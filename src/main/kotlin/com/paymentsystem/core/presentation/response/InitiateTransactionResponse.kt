@@ -10,7 +10,6 @@ data class InitiateTransactionResponse(
     val id: UUID,
     val merchantId: UUID,
     val merchantRef: String,
-    val internalRef: String,
     val amount: BigDecimal,
     val currency: String,
     val fee: BigDecimal,

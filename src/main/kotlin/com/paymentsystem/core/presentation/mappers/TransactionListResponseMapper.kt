@@ -13,7 +13,6 @@ object TransactionListResponseMapper {
                 TransactionResponse(
                     id = it.id,
                     merchantRef = it.merchantRef,
-                    internalRef = it.internalRef,
                     amount = it.amount.toPlainString(),
                     currency = it.currency,
                     fee = it.fee.toPlainString(),

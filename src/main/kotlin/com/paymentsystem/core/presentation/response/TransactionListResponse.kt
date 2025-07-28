@@ -10,7 +10,6 @@ data class TransactionListResponse(
 data class TransactionResponse(
     val id: UUID,
     val merchantRef: String,
-    val internalRef: String,
     val amount: String,
     val currency: String,
     val fee: String,
