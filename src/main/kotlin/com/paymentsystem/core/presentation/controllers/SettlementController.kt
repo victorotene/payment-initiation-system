@@ -6,7 +6,7 @@ import com.paymentsystem.core.domain.exceptions.NoUnsettledTransactionsException
 import com.paymentsystem.core.presentation.mappers.SettlementResponseMapper
 import com.paymentsystem.core.presentation.mappers.SettleTransactionsRequestMapper
 import com.paymentsystem.core.presentation.request.SettleTransactionsRequest
-import com.paymentsystem.core.presentation.response.ErrorResponse
+import com.paymentsystem.core.presentation.response.ApiResponse
 import com.paymentsystem.core.presentation.response.SettlementResponse
 import jakarta.validation.Valid
 import org.slf4j.LoggerFactory
@@ -26,38 +26,50 @@ class SettlementController(
     @PostMapping
     suspend fun settleTransactions(
         @Valid @RequestBody request: SettleTransactionsRequest
-    ): ResponseEntity<Any> {
-        logger.info("Received request to settle transactions for merchant: {}, limit: {}", request.merchantId, request.limit)
+    ): ResponseEntity<ApiResponse<SettlementResponse>> {
+        logger.info(
+            "Received SettleTransactionsRequest for merchantId={}, limit={}",
+            request.merchantId,
+            request.limit
+        )
 
         return try {
             val command = requestMapper.toCommand(request)
             val result = commandBus.send(command)
 
-            val response: SettlementResponse = responseMapper.fromSummary(result)
-
+            val response = responseMapper.fromSummary(result)
             logger.info("Successfully settled {} transactions into batch {}", response.transactionCount, response.batchId)
 
-            ResponseEntity.ok(response)
+            ResponseEntity.status(HttpStatus.OK).body(
+                ApiResponse.success(
+                    data = response,
+                    message = "Transactions settled successfully"
+                )
+            )
 
         } catch (e: MerchantNotFoundException) {
             logger.warn("Merchant not found: {}", e.message)
-            ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(ErrorResponse(e.message ?: "Merchant not found", "MERCHANT_NOT_FOUND"))
+            ResponseEntity.status(HttpStatus.NOT_FOUND).body(
+                ApiResponse.failure(message = e.message ?: "Merchant not found")
+            )
 
         } catch (e: NoUnsettledTransactionsException) {
             logger.warn("No unsettled transactions: {}", e.message)
-            ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(ErrorResponse(e.message ?: "No unsettled transactions to settle", "NO_UNSETTLED_TRANSACTIONS"))
+            ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+                ApiResponse.failure(message = e.message ?: "No unsettled transactions to settle")
+            )
 
         } catch (e: IllegalArgumentException) {
             logger.warn("Invalid input: {}", e.message)
-            ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                .body(ErrorResponse(e.message ?: "Invalid input", "INVALID_INPUT"))
+            ResponseEntity.status(HttpStatus.BAD_REQUEST).body(
+                ApiResponse.failure(message = e.message ?: "Invalid input")
+            )
 
         } catch (e: Exception) {
             logger.error("Unexpected error during settlement: {}", e.message, e)
-            ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(ErrorResponse("Internal server error", "INTERNAL_ERROR"))
+            ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
+                ApiResponse.failure(message = "Internal server error")
+            )
         }
     }
 }
