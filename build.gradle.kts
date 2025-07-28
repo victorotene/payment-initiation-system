@@ -30,7 +30,7 @@ dependencies {
 
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
-	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0") // ✅ 2.6.0 triggers deprecation warnings
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0")
 
 	runtimeOnly("org.postgresql:postgresql")
 
@@ -49,7 +49,6 @@ dependencies {
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:postgresql")
 
-	// === Optional: H2 for local test profile ===
 	testImplementation("com.h2database:h2")
 }
 
