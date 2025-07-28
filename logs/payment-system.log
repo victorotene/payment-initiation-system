@@ -4782,3 +4782,899 @@ WHERE idempotency_key = ?]
 2025-07-28 11:06:48.300 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
 2025-07-28 11:06:48.323 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
 2025-07-28 11:06:48.324 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 11:13:10.912 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 84677 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 11:13:10.914 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 11:13:10.936 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 11:13:10.936 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 11:13:11.779 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 11:13:11.785 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 11:13:11.785 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-28 11:13:11.803 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 11:13:11.803 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 867 ms
+2025-07-28 11:13:12.323 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 11:13:12.326 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 11:13:12.363 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+2025-07-28 11:13:12.373 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 1.674 seconds (process running for 3.184)
+2025-07-28 11:15:25.460 [http-nio-8080-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 11:15:25.462 [http-nio-8080-exec-2] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 11:15:25.468 [http-nio-8080-exec-2] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 6 ms
+2025-07-28 11:15:25.678 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.TransactionController] - Received ListTransactionsRequest for merchantId=5f065369-5939-48f8-90ed-d7a1fb4ff4bc, filters: status=SUCCESS, fromDate=2025-07-27T00:00, toDate=2025-07-29T00:00, page=0, size=20
+2025-07-28 11:15:25.680 [http-nio-8080-exec-2] INFO  [c.p.c.infrastructure.SimpleQueryBus] - Dispatching query: ListTransactionsQuery to ListTransactionsQueryHandler
+2025-07-28 11:15:25.683 [http-nio-8080-exec-2] INFO  [c.p.c.a.q.ListTransactionsQueryHandler] - Handling ListTransactionsQuery for merchant: 5f065369-5939-48f8-90ed-d7a1fb4ff4bc
+2025-07-28 11:15:25.697 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:15:25.698 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 11:15:25.699 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:15:25.700 [http-nio-8080-exec-2] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-07-28 11:15:25.807 [http-nio-8080-exec-2] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a46cb1e
+2025-07-28 11:15:25.809 [http-nio-8080-exec-2] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-07-28 11:15:25.854 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:15:25.854 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT COUNT(*) 
+FROM transactions 
+WHERE merchant_id = ? AND status = ? AND created_at >= ? AND created_at <= ?]
+2025-07-28 11:15:25.854 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:15:25.866 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:15:25.866 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT 
+    id,
+    merchant_id,
+    merchant_ref,
+    internal_ref,
+    idempotency_key,
+    amount,
+    currency,
+    fee,
+    net_amount,
+    retry_count,
+    status,
+    customer_simulated_debit_status,
+    settlement_batch_id,
+    created_at,
+    updated_at
+FROM transactions 
+WHERE merchant_id = ? AND status = ? AND created_at >= ? AND created_at <= ?
+ORDER BY created_at DESC, id DESC
+LIMIT ? OFFSET ?]
+2025-07-28 11:15:25.866 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:15:25.871 [DefaultDispatcher-worker-1] INFO  [c.p.c.a.q.ListTransactionsQueryHandler] - Retrieved 0 transactions for merchant: 5f065369-5939-48f8-90ed-d7a1fb4ff4bc
+2025-07-28 11:15:25.873 [DefaultDispatcher-worker-1] INFO  [c.p.c.p.c.TransactionController] - Successfully retrieved 0 transactions for merchant: 5f065369-5939-48f8-90ed-d7a1fb4ff4bc
+2025-07-28 11:24:54.185 [SpringApplicationShutdownHook] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-28 11:24:54.196 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
+2025-07-28 11:24:54.208 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 11:24:54.210 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 11:40:18.734 [Test worker] INFO  [c.p.c.PaymentInitiationSystemApplicationTests] - Starting PaymentInitiationSystemApplicationTests using Java 17.0.9 with PID 85817 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 11:40:18.735 [Test worker] INFO  [c.p.c.PaymentInitiationSystemApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 11:40:19.700 [Test worker] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-07-28 11:40:19.735 [Test worker] INFO  [c.p.c.PaymentInitiationSystemApplicationTests] - Started PaymentInitiationSystemApplicationTests in 1.1 seconds (process running for 1.699)
+2025-07-28 11:40:20.145 [Test worker] INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [com.paymentsystem.core.UnitTest.MerchantControllerTest]: MerchantControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-28 11:40:20.161 [Test worker] INFO  [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration com.paymentsystem.core.PaymentInitiationSystemApplication for test class com.paymentsystem.core.UnitTest.MerchantControllerTest
+2025-07-28 11:40:20.174 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 85817 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 11:40:20.174 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 11:40:20.409 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 11:40:20.409 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 11:40:20.410 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 11:40:20.418 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 0.252 seconds (process running for 2.382)
+2025-07-28 11:40:20.660 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 11:40:20.663 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 4718bea0-2659-4ca8-a4ff-8263a975639e
+2025-07-28 11:40:20.822 [Test worker @coroutine#4] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=bd3903ac-df90-4f69-a6da-087ad8918a8f, merchantRef=INV123, amount=5000.00, currency=NGN, idempotencyKey=unique-key-001)
+2025-07-28 11:40:20.823 [Test worker @coroutine#4] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: 3175cdb5-7296-42e0-b3b7-0b2407cab858
+2025-07-28 11:40:20.853 [Test worker @coroutine#7] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(#15)
+2025-07-28 11:40:20.854 [Test worker @coroutine#7] WARN  [c.p.c.p.c.TransactionController] - Merchant not found: Merchant not found
+2025-07-28 11:41:19.574 [Test worker] INFO  [c.p.c.PaymentInitiationSystemApplicationTests] - Starting PaymentInitiationSystemApplicationTests using Java 17.0.9 with PID 85941 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 11:41:19.575 [Test worker] INFO  [c.p.c.PaymentInitiationSystemApplicationTests] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 11:41:20.554 [Test worker] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-07-28 11:41:20.584 [Test worker] INFO  [c.p.c.PaymentInitiationSystemApplicationTests] - Started PaymentInitiationSystemApplicationTests in 1.105 seconds (process running for 1.713)
+2025-07-28 11:41:20.986 [Test worker] INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [com.paymentsystem.core.UnitTest.MerchantControllerTest]: MerchantControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-28 11:41:20.997 [Test worker] INFO  [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration com.paymentsystem.core.PaymentInitiationSystemApplication for test class com.paymentsystem.core.UnitTest.MerchantControllerTest
+2025-07-28 11:41:21.011 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 85941 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 11:41:21.011 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 11:41:21.249 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 11:41:21.250 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 11:41:21.251 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 11:41:21.258 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 0.255 seconds (process running for 2.387)
+2025-07-28 11:41:21.484 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 11:41:21.487 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 375eefa7-e0e2-4886-9fca-0dde33cd922a
+2025-07-28 11:41:21.640 [Test worker @coroutine#4] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=0d580ad3-a293-4947-97bc-f203cec8f250, merchantRef=INV123, amount=5000.00, currency=NGN, idempotencyKey=unique-key-001)
+2025-07-28 11:41:21.641 [Test worker @coroutine#4] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: 3f828cc0-cb81-4465-be69-5c1e0bd1473e
+2025-07-28 11:41:21.674 [Test worker @coroutine#7] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(#15)
+2025-07-28 11:41:21.674 [Test worker @coroutine#7] WARN  [c.p.c.p.c.TransactionController] - Merchant not found: Merchant not found
+2025-07-28 11:52:51.104 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 86492 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 11:52:51.105 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 11:52:51.129 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 11:52:51.129 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 11:52:51.861 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 11:52:51.866 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 11:52:51.867 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-07-28 11:52:51.887 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 11:52:51.888 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 759 ms
+2025-07-28 11:52:52.358 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 11:52:52.360 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-07-28 11:52:52.397 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2025-07-28 11:52:52.407 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 1.472 seconds (process running for 2.792)
+2025-07-28 11:52:52.699 [RMI TCP Connection(3)-127.0.0.1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 11:52:52.699 [RMI TCP Connection(3)-127.0.0.1] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 11:52:52.700 [RMI TCP Connection(4)-127.0.0.1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:52:52.700 [RMI TCP Connection(3)-127.0.0.1] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 11:52:52.700 [RMI TCP Connection(4)-127.0.0.1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-07-28 11:52:52.808 [RMI TCP Connection(4)-127.0.0.1] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@190a21ed
+2025-07-28 11:52:52.809 [RMI TCP Connection(4)-127.0.0.1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-07-28 11:52:52.815 [RMI TCP Connection(4)-127.0.0.1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:53:16.182 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Victor's Store, email=otene@example.com, settlementAccount=1234567890, balance=10000)
+2025-07-28 11:53:16.183 [http-nio-8080-exec-2] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: CreateMerchantCommand to CreateMerchantCommandHandler
+2025-07-28 11:53:16.185 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Handling CreateMerchantCommand for email: otene@example.com
+2025-07-28 11:53:16.197 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:53:16.197 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT 1 FROM merchants WHERE email = ? LIMIT 1]
+2025-07-28 11:53:16.197 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:53:18.399 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:53:18.405 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@264419120 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:53:18.407 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@264419120 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:53:18.410 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:53:18.410 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@264419120 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:53:18.410 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@264419120 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:53:18.413 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 11:53:18.413 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 11:53:18.413 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:53:18.423 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:53:18.423 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 11:53:18.423 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:53:18.427 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Successfully saved merchant with ID: 986fdf0b-87a8-488a-ae79-c6a13d3a0cda
+2025-07-28 11:53:18.428 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 986fdf0b-87a8-488a-ae79-c6a13d3a0cda
+2025-07-28 11:53:35.665 [http-nio-8080-exec-3] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=986fdf0b-87a8-488a-ae79-c6a13d3a0cda, merchantRef=INV-20250727-009, amount=5000, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:53:35.666 [http-nio-8080-exec-3] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:53:35.667 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:53:35.668 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@206175109 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:53:35.668 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@206175109 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:53:35.672 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:53:35.672 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@206175109 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:53:35.672 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@206175109 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:53:35.681 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:53:35.681 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:53:35.681 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:53:35.681 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:53:35.689 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:53:35.689 [http-nio-8080-exec-3] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:53:45.128 [http-nio-8080-exec-4] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=986fdf0b-87a8-488a-ae79-c6a13d3a0cda, merchantRef=INV-20250727-009, amount=5000, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:53:45.129 [http-nio-8080-exec-4] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:53:45.129 [http-nio-8080-exec-4] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:53:45.130 [http-nio-8080-exec-4] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1150378481 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:53:45.130 [http-nio-8080-exec-4] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1150378481 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:53:45.130 [http-nio-8080-exec-4] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:53:45.131 [http-nio-8080-exec-4] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1150378481 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:53:45.131 [http-nio-8080-exec-4] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1150378481 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:53:45.131 [http-nio-8080-exec-4] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:53:45.132 [http-nio-8080-exec-4] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:53:45.132 [http-nio-8080-exec-4] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:53:45.132 [http-nio-8080-exec-4] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:53:45.133 [http-nio-8080-exec-4] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:53:45.135 [http-nio-8080-exec-4] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:54:27.656 [http-nio-8080-exec-5] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=986fdf0b-87a8-488a-ae79-c6a13d3a0cda, merchantRef=INV-20250727-009, amount=5000, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:54:30.701 [http-nio-8080-exec-5] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:54:30.703 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:54:30.706 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@908401828 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:54:30.707 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@908401828 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:54:30.709 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:54:30.709 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@908401828 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:54:30.710 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@908401828 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:54:30.717 [http-nio-8080-exec-5] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:54:30.718 [http-nio-8080-exec-5] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:54:30.718 [http-nio-8080-exec-5] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:54:30.718 [http-nio-8080-exec-5] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:54:30.720 [http-nio-8080-exec-5] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:54:32.874 [http-nio-8080-exec-5] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:56:12.282 [http-nio-8080-exec-8] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=986fdf0b-87a8-488a-ae79-c6a13d3a0cda, merchantRef=INV-20250727-007, amount=5000, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:56:16.113 [http-nio-8080-exec-8] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:56:16.114 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:56:16.117 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@82631985 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:56:16.118 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@82631985 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:56:16.121 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:56:16.121 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@82631985 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:56:16.122 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@82631985 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:56:16.130 [http-nio-8080-exec-8] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:56:16.130 [http-nio-8080-exec-8] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:56:16.130 [http-nio-8080-exec-8] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:56:16.130 [http-nio-8080-exec-8] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:56:16.132 [http-nio-8080-exec-8] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:56:18.031 [http-nio-8080-exec-8] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:56:36.737 [http-nio-8080-exec-9] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=986fdf0b-87a8-488a-ae79-c6a13d3a0cda, merchantRef=INV-20250727-007, amount=300, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:56:48.407 [http-nio-8080-exec-9] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:57:01.304 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:57:01.307 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@678712405 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:57:01.308 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@678712405 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:57:01.310 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:57:01.311 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@678712405 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:57:01.311 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@678712405 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:57:04.427 [http-nio-8080-exec-9] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:57:04.427 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:57:04.427 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:57:04.427 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:57:04.429 [http-nio-8080-exec-9] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:58:01.006 [http-nio-8080-exec-9] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:58:27.279 [http-nio-8080-exec-10] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=986fdf0b-87a8-488a-ae79-c6a13d3a0cda, merchantRef=INV-20250727-007, amount=300, currency=NGN, idempotencyKey=idemp-20250727-059)
+2025-07-28 11:58:31.310 [http-nio-8080-exec-10] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:58:31.311 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:58:31.314 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1209784248 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:58:31.314 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1209784248 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:58:31.317 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:58:31.317 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1209784248 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:58:31.318 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1209784248 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:58:31.326 [http-nio-8080-exec-10] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-059
+2025-07-28 11:58:31.327 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:58:31.327 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:58:31.327 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:58:31.330 [http-nio-8080-exec-10] WARN  [c.p.c.i.r.PostgresTransactionRepository] - Query returned no result or failed: Incorrect result size: expected 1, actual 0
+2025-07-28 11:58:31.335 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:58:31.335 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 11:58:31.336 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:58:31.354 [http-nio-8080-exec-10] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Saving new transaction: ID = 929f4c62-5032-4f11-8c8e-6399c5b63ee2, Status = INITIATED, Amount = 300
+2025-07-28 11:58:31.355 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 11:58:31.355 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO transactions (
+    id, merchant_id, merchant_ref, internal_ref, amount, currency,
+    fee, net_amount, retry_count, status, idempotency_key,
+    customer_simulated_debit_status, settlement_batch_id, created_at, updated_at
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?, ?
+)]
+2025-07-28 11:58:31.355 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:58:31.369 [http-nio-8080-exec-10] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction saved: ID = 929f4c62-5032-4f11-8c8e-6399c5b63ee2, rows affected = 1
+2025-07-28 11:58:31.369 [http-nio-8080-exec-10] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 929f4c62-5032-4f11-8c8e-6399c5b63ee2
+2025-07-28 11:58:31.370 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:58:31.370 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 11:58:31.370 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:58:31.370 [http-nio-8080-exec-10] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 929f4c62-5032-4f11-8c8e-6399c5b63ee2
+2025-07-28 11:58:31.876 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:58:31.877 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1433700518 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:58:31.877 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1433700518 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:58:31.877 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:58:31.877 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1433700518 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:58:31.877 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1433700518 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:58:31.878 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 11:58:31.878 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 11:58:31.878 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:58:31.894 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:58:31.894 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 11:58:31.894 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:58:31.895 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:58:31.896 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1006609189 wrapping org.postgresql.jdbc.PgConnection@190a21ed] for JDBC transaction
+2025-07-28 11:58:31.896 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1006609189 wrapping org.postgresql.jdbc.PgConnection@190a21ed] to manual commit
+2025-07-28 11:58:31.896 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:58:31.896 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1006609189 wrapping org.postgresql.jdbc.PgConnection@190a21ed]
+2025-07-28 11:58:31.896 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1006609189 wrapping org.postgresql.jdbc.PgConnection@190a21ed] after transaction
+2025-07-28 11:58:31.897 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Updating transaction: ID = 929f4c62-5032-4f11-8c8e-6399c5b63ee2, Status = SUCCESS, RetryCount = 0
+2025-07-28 11:58:31.897 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 11:58:31.897 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]
+2025-07-28 11:58:31.897 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:58:31.901 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction updated: ID = 929f4c62-5032-4f11-8c8e-6399c5b63ee2, rows affected = 1
+2025-07-28 11:58:31.901 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 929f4c62-5032-4f11-8c8e-6399c5b63ee2
+2025-07-28 11:58:31.901 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:58:31.901 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 11:58:31.901 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:58:31.902 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 929f4c62-5032-4f11-8c8e-6399c5b63ee2
+2025-07-28 11:59:01.051 [HikariPool-1 housekeeper] WARN  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s787ms).
+2025-07-28 11:59:02.068 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: 929f4c62-5032-4f11-8c8e-6399c5b63ee2
+2025-07-28 11:59:18.199 [http-nio-8080-exec-2] WARN  [o.s.w.s.m.s.DefaultHandlerExceptionResolver] - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2025-07-28 12:02:17.316 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 12:02:17.319 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 12:02:21.494 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 86849 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 12:02:21.496 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 12:02:21.538 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 12:02:21.538 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 12:02:22.751 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 12:02:22.758 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 12:02:22.759 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-07-28 12:02:22.787 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 12:02:22.788 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1249 ms
+2025-07-28 12:02:23.309 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 12:02:23.311 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-07-28 12:02:23.353 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path ''
+2025-07-28 12:02:23.364 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 2.206 seconds (process running for 3.288)
+2025-07-28 12:02:23.685 [RMI TCP Connection(1)-127.0.0.1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:02:23.685 [RMI TCP Connection(4)-127.0.0.1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 12:02:23.685 [RMI TCP Connection(4)-127.0.0.1] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 12:02:23.686 [RMI TCP Connection(1)-127.0.0.1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-07-28 12:02:23.687 [RMI TCP Connection(4)-127.0.0.1] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2025-07-28 12:02:23.801 [RMI TCP Connection(1)-127.0.0.1] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f00a376
+2025-07-28 12:02:23.804 [RMI TCP Connection(1)-127.0.0.1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-07-28 12:02:23.811 [RMI TCP Connection(1)-127.0.0.1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:02:44.791 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Victor's Store, email=otene@example.com, settlementAccount=1234567890, balance=10000)
+2025-07-28 12:02:44.793 [http-nio-8080-exec-2] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: CreateMerchantCommand to CreateMerchantCommandHandler
+2025-07-28 12:02:44.796 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Handling CreateMerchantCommand for email: otene@example.com
+2025-07-28 12:02:44.808 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:02:44.809 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT 1 FROM merchants WHERE email = ? LIMIT 1]
+2025-07-28 12:02:44.809 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:02:47.174 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:02:47.177 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1748066811 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:02:47.178 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1748066811 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:02:47.180 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:02:47.180 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1748066811 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:02:47.180 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1748066811 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:02:47.181 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:02:47.181 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 12:02:47.181 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:02:47.187 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:02:47.187 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:02:47.188 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:02:47.190 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Successfully saved merchant with ID: c2e962f9-991b-449f-8428-34f6f24adba4
+2025-07-28 12:02:47.191 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: c2e962f9-991b-449f-8428-34f6f24adba4
+2025-07-28 12:03:15.195 [http-nio-8080-exec-3] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=c2e962f9-991b-449f-8428-34f6f24adba4, merchantRef=INV-20250727-001, amount=300, currency=NGN, idempotencyKey=idemp-20250727-001)
+2025-07-28 12:03:18.020 [http-nio-8080-exec-3] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 12:03:18.021 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:03:18.023 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1472383730 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:03:18.024 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1472383730 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:03:18.053 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:03:18.053 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1472383730 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:03:18.054 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1472383730 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:03:18.066 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-001
+2025-07-28 12:03:18.066 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:03:18.066 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 12:03:18.066 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:18.077 [http-nio-8080-exec-3] WARN  [c.p.c.i.r.PostgresTransactionRepository] - Query returned no result or failed: Incorrect result size: expected 1, actual 0
+2025-07-28 12:03:18.080 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:03:18.081 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:03:18.081 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:18.092 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Saving new transaction: ID = fecd41f4-05d8-4cae-b162-5bca9f35b944, Status = INITIATED, Amount = 300
+2025-07-28 12:03:18.093 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:03:18.094 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO transactions (
+    id, merchant_id, merchant_ref, internal_ref, amount, currency,
+    fee, net_amount, retry_count, status, idempotency_key,
+    customer_simulated_debit_status, settlement_batch_id, created_at, updated_at
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?, ?
+)]
+2025-07-28 12:03:18.094 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:18.097 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction saved: ID = fecd41f4-05d8-4cae-b162-5bca9f35b944, rows affected = 1
+2025-07-28 12:03:18.098 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = fecd41f4-05d8-4cae-b162-5bca9f35b944
+2025-07-28 12:03:18.098 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:03:18.098 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 12:03:18.098 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:18.099 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = fecd41f4-05d8-4cae-b162-5bca9f35b944
+2025-07-28 12:03:18.609 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:03:18.610 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1608873797 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:03:18.610 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1608873797 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:03:18.610 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:03:18.610 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1608873797 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:03:18.610 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1608873797 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:03:18.611 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:03:18.611 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 12:03:18.611 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:18.615 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:03:18.615 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:03:18.615 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:18.618 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:03:18.618 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1392832117 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:03:18.618 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1392832117 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:03:18.618 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:03:18.618 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1392832117 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:03:18.618 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1392832117 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:03:18.619 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Updating transaction: ID = fecd41f4-05d8-4cae-b162-5bca9f35b944, Status = SUCCESS, RetryCount = 0
+2025-07-28 12:03:18.620 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:03:18.620 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]
+2025-07-28 12:03:18.620 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:18.621 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction updated: ID = fecd41f4-05d8-4cae-b162-5bca9f35b944, rows affected = 1
+2025-07-28 12:03:18.622 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = fecd41f4-05d8-4cae-b162-5bca9f35b944
+2025-07-28 12:03:18.622 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:03:18.622 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 12:03:18.622 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:18.623 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = fecd41f4-05d8-4cae-b162-5bca9f35b944
+2025-07-28 12:03:20.797 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: fecd41f4-05d8-4cae-b162-5bca9f35b944
+2025-07-28 12:03:41.018 [http-nio-8080-exec-5] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=c2e962f9-991b-449f-8428-34f6f24adba4, merchantRef=INV-20250727-001, amount=300, currency=NGN, idempotencyKey=idemp-20250727-001)
+2025-07-28 12:03:42.883 [http-nio-8080-exec-5] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 12:03:42.886 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:03:42.894 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@874055853 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:03:42.894 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@874055853 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:03:42.895 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:03:42.895 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@874055853 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:03:42.895 [http-nio-8080-exec-5] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@874055853 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:03:42.896 [http-nio-8080-exec-5] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-001
+2025-07-28 12:03:42.897 [http-nio-8080-exec-5] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:03:42.897 [http-nio-8080-exec-5] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 12:03:42.897 [http-nio-8080-exec-5] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:03:42.900 [http-nio-8080-exec-5] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = fecd41f4-05d8-4cae-b162-5bca9f35b944
+2025-07-28 12:03:42.901 [http-nio-8080-exec-5] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: fecd41f4-05d8-4cae-b162-5bca9f35b944
+2025-07-28 12:04:12.729 [http-nio-8080-exec-6] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=c2e962f9-991b-449f-8428-34f6f24adba4, merchantRef=INV-20250727-002, amount=300, currency=NGN, idempotencyKey=idemp-20250727-002)
+2025-07-28 12:04:23.234 [http-nio-8080-exec-6] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 12:04:23.716 [http-nio-8080-exec-6] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:04:23.718 [http-nio-8080-exec-6] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@913437430 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:04:23.718 [http-nio-8080-exec-6] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@913437430 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:04:23.720 [http-nio-8080-exec-6] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:04:23.720 [http-nio-8080-exec-6] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@913437430 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:04:23.721 [http-nio-8080-exec-6] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@913437430 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:04:28.054 [http-nio-8080-exec-6] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-002
+2025-07-28 12:04:28.054 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:04:28.054 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 12:04:28.054 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:04:28.056 [http-nio-8080-exec-6] WARN  [c.p.c.i.r.PostgresTransactionRepository] - Query returned no result or failed: Incorrect result size: expected 1, actual 0
+2025-07-28 12:04:28.059 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:04:28.059 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:04:28.059 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:04:28.071 [http-nio-8080-exec-6] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Saving new transaction: ID = dac88708-76ce-4128-884c-629802910e20, Status = INITIATED, Amount = 300
+2025-07-28 12:04:28.071 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:04:28.071 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO transactions (
+    id, merchant_id, merchant_ref, internal_ref, amount, currency,
+    fee, net_amount, retry_count, status, idempotency_key,
+    customer_simulated_debit_status, settlement_batch_id, created_at, updated_at
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?, ?
+)]
+2025-07-28 12:04:28.071 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:04:28.074 [http-nio-8080-exec-6] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction saved: ID = dac88708-76ce-4128-884c-629802910e20, rows affected = 1
+2025-07-28 12:04:28.074 [http-nio-8080-exec-6] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = dac88708-76ce-4128-884c-629802910e20
+2025-07-28 12:04:28.074 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:04:28.074 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 12:04:28.074 [http-nio-8080-exec-6] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:04:28.074 [http-nio-8080-exec-6] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = dac88708-76ce-4128-884c-629802910e20
+2025-07-28 12:04:28.578 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:04:28.578 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@966235153 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:04:28.578 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@966235153 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:04:28.579 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:04:28.579 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@966235153 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:04:28.579 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@966235153 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:04:28.579 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:04:28.579 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 12:04:28.579 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:04:28.580 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:04:28.580 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:04:28.580 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1443283425 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1443283425 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1443283425 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1443283425 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Updating transaction: ID = dac88708-76ce-4128-884c-629802910e20, Status = SUCCESS, RetryCount = 0
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:04:28.581 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]
+2025-07-28 12:04:28.582 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:04:28.582 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction updated: ID = dac88708-76ce-4128-884c-629802910e20, rows affected = 1
+2025-07-28 12:04:28.582 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = dac88708-76ce-4128-884c-629802910e20
+2025-07-28 12:04:28.582 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:04:28.582 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 12:04:28.582 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:04:28.583 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = dac88708-76ce-4128-884c-629802910e20
+2025-07-28 12:06:32.448 [HikariPool-1 housekeeper] WARN  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m4s395ms).
+2025-07-28 12:06:32.452 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: dac88708-76ce-4128-884c-629802910e20
+2025-07-28 12:06:32.475 [http-nio-8080-exec-7] WARN  [o.s.w.s.m.s.DefaultHandlerExceptionResolver] - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+2025-07-28 12:10:04.018 [http-nio-8080-exec-9] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=c2e962f9-991b-449f-8428-34f6f24adba4, merchantRef=INV-20250727-002, amount=300, currency=NGN, idempotencyKey=idemp-20250727-002)
+2025-07-28 12:10:08.909 [http-nio-8080-exec-9] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 12:10:08.911 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:10:08.914 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1356383220 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:10:08.915 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1356383220 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:10:08.917 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:10:08.917 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1356383220 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:10:08.918 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1356383220 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:10:08.928 [http-nio-8080-exec-9] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-002
+2025-07-28 12:10:08.928 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:10:08.928 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 12:10:08.928 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:10:08.935 [http-nio-8080-exec-9] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = dac88708-76ce-4128-884c-629802910e20
+2025-07-28 12:12:13.783 [HikariPool-1 housekeeper] WARN  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m11s210ms).
+2025-07-28 12:12:13.793 [http-nio-8080-exec-9] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: dac88708-76ce-4128-884c-629802910e20
+2025-07-28 12:12:30.367 [http-nio-8080-exec-1] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=c2e962f9-991b-449f-8428-34f6f24adba4, merchantRef=INV-20250727-003, amount=200, currency=NGN, idempotencyKey=idemp-20250727-003)
+2025-07-28 12:12:33.625 [http-nio-8080-exec-1] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 12:12:33.626 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:12:33.628 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1820530047 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:12:33.629 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1820530047 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:12:33.631 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:12:33.631 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1820530047 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:12:33.632 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1820530047 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:12:33.644 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-003
+2025-07-28 12:12:33.644 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:12:33.644 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 12:12:33.644 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:12:33.652 [http-nio-8080-exec-1] WARN  [c.p.c.i.r.PostgresTransactionRepository] - Query returned no result or failed: Incorrect result size: expected 1, actual 0
+2025-07-28 12:12:33.653 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:12:33.653 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:12:33.653 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:12:33.665 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Saving new transaction: ID = 9e03048e-64c9-448d-ae63-18030ffed4c3, Status = INITIATED, Amount = 200
+2025-07-28 12:12:33.665 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:12:33.665 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO transactions (
+    id, merchant_id, merchant_ref, internal_ref, amount, currency,
+    fee, net_amount, retry_count, status, idempotency_key,
+    customer_simulated_debit_status, settlement_batch_id, created_at, updated_at
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?, ?
+)]
+2025-07-28 12:12:33.666 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:12:33.670 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction saved: ID = 9e03048e-64c9-448d-ae63-18030ffed4c3, rows affected = 1
+2025-07-28 12:12:33.670 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 9e03048e-64c9-448d-ae63-18030ffed4c3
+2025-07-28 12:12:33.670 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:12:33.670 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 12:12:33.670 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:12:33.670 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 9e03048e-64c9-448d-ae63-18030ffed4c3
+2025-07-28 12:12:34.177 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:12:34.178 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@196178166 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:12:34.179 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@196178166 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:12:34.179 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:12:34.179 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@196178166 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:12:34.179 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@196178166 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:12:34.180 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:12:34.180 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 12:12:34.180 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:12:34.184 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:12:34.184 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:12:34.184 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:12:34.185 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:12:34.185 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1147115923 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:12:34.185 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1147115923 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:12:34.186 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:12:34.186 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1147115923 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:12:34.186 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1147115923 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:12:34.186 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Updating transaction: ID = 9e03048e-64c9-448d-ae63-18030ffed4c3, Status = SUCCESS, RetryCount = 0
+2025-07-28 12:12:34.186 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:12:34.186 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]
+2025-07-28 12:12:34.186 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:12:34.188 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction updated: ID = 9e03048e-64c9-448d-ae63-18030ffed4c3, rows affected = 1
+2025-07-28 12:12:34.188 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 9e03048e-64c9-448d-ae63-18030ffed4c3
+2025-07-28 12:12:34.188 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:12:34.188 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 12:12:34.188 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:12:34.189 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 9e03048e-64c9-448d-ae63-18030ffed4c3
+2025-07-28 12:12:36.208 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: 9e03048e-64c9-448d-ae63-18030ffed4c3
+2025-07-28 12:12:54.291 [http-nio-8080-exec-3] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=c2e962f9-991b-449f-8428-34f6f24adba4, merchantRef=INV-20250727-004, amount=500, currency=NGN, idempotencyKey=idemp-20250727-004)
+2025-07-28 12:12:56.356 [http-nio-8080-exec-3] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 12:12:56.360 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:12:56.363 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@716732165 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:12:56.363 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@716732165 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:12:56.365 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:12:56.365 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@716732165 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:12:56.365 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@716732165 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:13:01.609 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-004
+2025-07-28 12:13:01.609 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:13:01.609 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 12:13:01.609 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:13:01.611 [http-nio-8080-exec-3] WARN  [c.p.c.i.r.PostgresTransactionRepository] - Query returned no result or failed: Incorrect result size: expected 1, actual 0
+2025-07-28 12:13:05.432 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:13:05.432 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:13:05.432 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:13:32.574 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Saving new transaction: ID = 47b9ca21-ffd6-4540-a3bf-b369113e2f78, Status = INITIATED, Amount = 500
+2025-07-28 12:13:32.577 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:13:32.577 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO transactions (
+    id, merchant_id, merchant_ref, internal_ref, amount, currency,
+    fee, net_amount, retry_count, status, idempotency_key,
+    customer_simulated_debit_status, settlement_batch_id, created_at, updated_at
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?, ?
+)]
+2025-07-28 12:13:32.578 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:13:32.589 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction saved: ID = 47b9ca21-ffd6-4540-a3bf-b369113e2f78, rows affected = 1
+2025-07-28 12:13:32.589 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 47b9ca21-ffd6-4540-a3bf-b369113e2f78
+2025-07-28 12:13:32.589 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:13:32.589 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 12:13:32.589 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:13:32.590 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 47b9ca21-ffd6-4540-a3bf-b369113e2f78
+2025-07-28 12:13:57.473 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:13:57.477 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1833215509 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:13:57.478 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1833215509 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:13:57.480 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:13:57.481 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1833215509 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:13:57.482 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1833215509 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:13:57.490 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:13:57.490 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 12:13:57.490 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:13:57.492 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:13:57.492 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:13:57.492 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:14:24.117 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:14:24.135 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@598515306 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:14:24.137 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@598515306 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:14:24.154 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:14:24.154 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@598515306 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:14:24.155 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@598515306 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:14:24.166 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Updating transaction: ID = 47b9ca21-ffd6-4540-a3bf-b369113e2f78, Status = SUCCESS, RetryCount = 0
+2025-07-28 12:14:24.168 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:14:24.168 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]
+2025-07-28 12:14:24.169 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:14:24.245 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction updated: ID = 47b9ca21-ffd6-4540-a3bf-b369113e2f78, rows affected = 1
+2025-07-28 12:14:24.245 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 47b9ca21-ffd6-4540-a3bf-b369113e2f78
+2025-07-28 12:14:24.245 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:14:24.245 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 12:14:24.245 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:14:24.249 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 47b9ca21-ffd6-4540-a3bf-b369113e2f78
+2025-07-28 12:14:24.250 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: 47b9ca21-ffd6-4540-a3bf-b369113e2f78
+2025-07-28 12:15:19.978 [http-nio-8080-exec-7] INFO  [c.p.c.p.c.TransactionController] - Received ListTransactionsRequest for merchantId=c2e962f9-991b-449f-8428-34f6f24adba4, filters: status=SUCCESS, fromDate=2025-07-27T00:00, toDate=2025-07-29T00:00, page=0, size=20
+2025-07-28 12:15:19.982 [http-nio-8080-exec-7] INFO  [c.p.c.infrastructure.SimpleQueryBus] - Dispatching query: ListTransactionsQuery to ListTransactionsQueryHandler
+2025-07-28 12:15:19.983 [http-nio-8080-exec-7] INFO  [c.p.c.a.q.ListTransactionsQueryHandler] - Handling ListTransactionsQuery for merchant: c2e962f9-991b-449f-8428-34f6f24adba4
+2025-07-28 12:15:19.986 [http-nio-8080-exec-7] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:15:19.986 [http-nio-8080-exec-7] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:15:19.986 [http-nio-8080-exec-7] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:15:20.024 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:15:20.024 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT COUNT(*) 
+FROM transactions 
+WHERE merchant_id = ? AND status = ? AND created_at >= ? AND created_at <= ?]
+2025-07-28 12:15:20.024 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:15:20.039 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:15:20.040 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT 
+    id,
+    merchant_id,
+    merchant_ref,
+    internal_ref,
+    idempotency_key,
+    amount,
+    currency,
+    fee,
+    net_amount,
+    retry_count,
+    status,
+    customer_simulated_debit_status,
+    settlement_batch_id,
+    created_at,
+    updated_at
+FROM transactions 
+WHERE merchant_id = ? AND status = ? AND created_at >= ? AND created_at <= ?
+ORDER BY created_at DESC, id DESC
+LIMIT ? OFFSET ?]
+2025-07-28 12:15:20.040 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:15:20.045 [DefaultDispatcher-worker-1] INFO  [c.p.c.a.q.ListTransactionsQueryHandler] - Retrieved 4 transactions for merchant: c2e962f9-991b-449f-8428-34f6f24adba4
+2025-07-28 12:15:20.047 [DefaultDispatcher-worker-1] INFO  [c.p.c.p.c.TransactionController] - Successfully retrieved 4 transactions for merchant: c2e962f9-991b-449f-8428-34f6f24adba4
+2025-07-28 12:15:40.932 [http-nio-8080-exec-10] INFO  [c.p.c.p.c.SettlementController] - Received SettleTransactionsRequest for merchantId=c2e962f9-991b-449f-8428-34f6f24adba4, limit=100
+2025-07-28 12:15:40.934 [http-nio-8080-exec-10] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: SettleTransactionsCommand to SettleTransactionsHandler$$SpringCGLIB$$0
+2025-07-28 12:15:40.936 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.commandhandlers.SettleTransactionsHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:15:40.937 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1404219091 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:15:40.937 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1404219091 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:15:40.943 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:15:40.943 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1404219091 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:15:40.943 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1404219091 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:15:40.948 [http-nio-8080-exec-10] INFO  [c.p.c.a.c.SettleTransactionsHandler] - Starting settlement process for merchant: c2e962f9-991b-449f-8428-34f6f24adba4, limit: 100
+2025-07-28 12:15:40.948 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:15:40.948 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 12:15:40.948 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:15:40.959 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:15:40.959 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions
+WHERE merchant_id = ?
+  AND status = ?
+  AND settlement_batch_id IS NULL
+ORDER BY created_at ASC
+LIMIT ?]
+2025-07-28 12:15:40.959 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:15:43.383 [http-nio-8080-exec-10] INFO  [c.p.c.a.c.SettleTransactionsHandler] - Settlement calculation - Total amount: 1300.00, Total fee: 19.50, Transaction count: 4
+2025-07-28 12:15:43.397 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresSettlementRepository.saveSettlementBatch]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:15:43.398 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@603160238 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:15:43.398 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@603160238 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:15:43.399 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:15:43.399 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@603160238 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:15:43.399 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@603160238 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:15:43.401 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:15:43.401 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO settlement_batches (
+    id, batch_ref, merchant_id, total_amount, total_fee, net_amount,
+    currency, transaction_count, status, created_at, updated_at
+)
+VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    status = EXCLUDED.status,
+    updated_at = EXCLUDED.updated_at]
+2025-07-28 12:15:43.401 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:15:43.416 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 12:15:43.416 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM settlement_batches
+WHERE id = ?]
+2025-07-28 12:15:43.416 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:15:43.448 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresSettlementRepository.updateTransactionsWithBatch]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 12:15:43.449 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1961111860 wrapping org.postgresql.jdbc.PgConnection@3f00a376] for JDBC transaction
+2025-07-28 12:15:43.449 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1961111860 wrapping org.postgresql.jdbc.PgConnection@3f00a376] to manual commit
+2025-07-28 12:15:43.452 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 12:15:43.452 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1961111860 wrapping org.postgresql.jdbc.PgConnection@3f00a376]
+2025-07-28 12:15:43.452 [http-nio-8080-exec-10] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1961111860 wrapping org.postgresql.jdbc.PgConnection@3f00a376] after transaction
+2025-07-28 12:15:43.452 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 12:15:43.452 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions
+SET settlement_batch_id = ?,
+    status = ?,
+    updated_at = now() at time zone 'UTC'
+WHERE id = ANY(?)
+  AND status = ?
+  AND settlement_batch_id IS NULL]
+2025-07-28 12:15:43.452 [http-nio-8080-exec-10] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 12:15:43.469 [http-nio-8080-exec-10] INFO  [c.p.c.a.c.SettleTransactionsHandler] - Settlement batch created successfully: d9c652d4-2708-4193-808a-17bb5e691d5c with 4 transactions
+2025-07-28 12:15:43.469 [http-nio-8080-exec-10] INFO  [c.p.c.p.c.SettlementController] - Successfully settled 4 transactions into batch d9c652d4-2708-4193-808a-17bb5e691d5c
+2025-07-28 12:17:15.765 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 12:17:15.767 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
