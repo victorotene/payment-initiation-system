@@ -1,0 +1,1225 @@
+2025-07-28 01:47:13.704 [SpringApplicationShutdownHook] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-28 01:47:13.805 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
+2025-07-28 01:47:13.957 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 01:47:13.963 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 01:47:27.855 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 61280 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 01:47:27.857 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 01:47:27.880 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 01:47:27.880 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 01:47:28.687 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 01:47:28.695 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 01:47:28.695 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-28 01:47:28.715 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 01:47:28.715 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 835 ms
+2025-07-28 01:47:29.186 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 01:47:29.188 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 01:47:29.248 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+2025-07-28 01:47:29.258 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 1.595 seconds (process running for 3.072)
+2025-07-28 01:47:48.853 [http-nio-8080-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 01:47:48.854 [http-nio-8080-exec-1] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 01:47:48.859 [http-nio-8080-exec-1] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 4 ms
+2025-07-28 01:47:49.037 [http-nio-8080-exec-1] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=bdeb26c9-7b44-4e42-847f-4d7157d6159d, merchantRef=INV-20250727-002, amount=100, currency=NGN, idempotencyKey=idemp-20250727-002)
+2025-07-28 01:47:49.039 [http-nio-8080-exec-1] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 01:47:49.042 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 01:47:49.043 [http-nio-8080-exec-1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-07-28 01:47:49.152 [http-nio-8080-exec-1] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1d36509f
+2025-07-28 01:47:49.154 [http-nio-8080-exec-1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-07-28 01:47:49.156 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@376627056 wrapping org.postgresql.jdbc.PgConnection@1d36509f] for JDBC transaction
+2025-07-28 01:47:49.158 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@376627056 wrapping org.postgresql.jdbc.PgConnection@1d36509f] to manual commit
+2025-07-28 01:47:49.162 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 01:47:49.162 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@376627056 wrapping org.postgresql.jdbc.PgConnection@1d36509f]
+2025-07-28 01:47:49.162 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@376627056 wrapping org.postgresql.jdbc.PgConnection@1d36509f] after transaction
+2025-07-28 01:47:49.174 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-002
+2025-07-28 01:47:49.176 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 01:47:49.176 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 01:47:49.176 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 01:47:49.211 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = b558f607-8dee-4ddb-8c7b-4ecbcf22e9df
+2025-07-28 01:47:49.215 [http-nio-8080-exec-1] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: b558f607-8dee-4ddb-8c7b-4ecbcf22e9df
+2025-07-28 01:48:04.255 [http-nio-8080-exec-3] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=bdeb26c9-7b44-4e42-847f-4d7157d6159d, merchantRef=INV-20250727-005, amount=100, currency=NGN, idempotencyKey=idemp-20250727-005)
+2025-07-28 01:48:04.256 [http-nio-8080-exec-3] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 01:48:04.256 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 01:48:04.259 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1892297183 wrapping org.postgresql.jdbc.PgConnection@1d36509f] for JDBC transaction
+2025-07-28 01:48:04.260 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1892297183 wrapping org.postgresql.jdbc.PgConnection@1d36509f] to manual commit
+2025-07-28 01:48:04.261 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 01:48:04.261 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1892297183 wrapping org.postgresql.jdbc.PgConnection@1d36509f]
+2025-07-28 01:48:04.261 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1892297183 wrapping org.postgresql.jdbc.PgConnection@1d36509f] after transaction
+2025-07-28 01:48:04.262 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-005
+2025-07-28 01:48:04.263 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 01:48:04.263 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 01:48:04.263 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 01:48:04.266 [http-nio-8080-exec-3] WARN  [c.p.c.i.r.PostgresTransactionRepository] - Query returned no result or failed: Incorrect result size: expected 1, actual 0
+2025-07-28 01:48:04.278 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 01:48:04.278 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 01:48:04.278 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 01:48:04.292 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Saving new transaction: ID = c5f010bb-de42-46a7-80fb-b2046dc10722, Status = INITIATED, Amount = 100
+2025-07-28 01:48:04.292 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 01:48:04.292 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO transactions (
+    id, merchant_id, merchant_ref, internal_ref, amount, currency,
+    fee, net_amount, retry_count, status, idempotency_key,
+    customer_simulated_debit_status, settlement_batch_id, created_at, updated_at
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?, ?
+)]
+2025-07-28 01:48:04.292 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 01:48:04.311 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction saved: ID = c5f010bb-de42-46a7-80fb-b2046dc10722, rows affected = 1
+2025-07-28 01:48:04.311 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = c5f010bb-de42-46a7-80fb-b2046dc10722
+2025-07-28 01:48:04.311 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 01:48:04.311 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 01:48:04.311 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 01:48:04.312 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c5f010bb-de42-46a7-80fb-b2046dc10722
+2025-07-28 01:48:04.825 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 01:48:04.826 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@403249401 wrapping org.postgresql.jdbc.PgConnection@1d36509f] for JDBC transaction
+2025-07-28 01:48:04.827 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@403249401 wrapping org.postgresql.jdbc.PgConnection@1d36509f] to manual commit
+2025-07-28 01:48:04.829 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 01:48:04.829 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@403249401 wrapping org.postgresql.jdbc.PgConnection@1d36509f]
+2025-07-28 01:48:04.829 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@403249401 wrapping org.postgresql.jdbc.PgConnection@1d36509f] after transaction
+2025-07-28 01:48:04.832 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 01:48:04.833 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 01:48:04.833 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 01:48:04.905 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 01:48:04.906 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 01:48:04.906 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 01:48:04.909 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 01:48:04.910 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@24531106 wrapping org.postgresql.jdbc.PgConnection@1d36509f] for JDBC transaction
+2025-07-28 01:48:04.910 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@24531106 wrapping org.postgresql.jdbc.PgConnection@1d36509f] to manual commit
+2025-07-28 01:48:04.911 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 01:48:04.912 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@24531106 wrapping org.postgresql.jdbc.PgConnection@1d36509f]
+2025-07-28 01:48:04.912 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@24531106 wrapping org.postgresql.jdbc.PgConnection@1d36509f] after transaction
+2025-07-28 01:48:04.914 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Updating transaction: ID = c5f010bb-de42-46a7-80fb-b2046dc10722, Status = SUCCESS, RetryCount = 0
+2025-07-28 01:48:04.915 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 01:48:04.915 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]
+2025-07-28 01:48:04.915 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 01:48:04.943 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.s.SQLStateSQLExceptionTranslator] - Extracted SQL state class '23' from value '23514'
+2025-07-28 01:48:04.951 [kotlinx.coroutines.DefaultExecutor] ERROR [c.p.c.p.c.TransactionController] - Unexpected error occurred: PreparedStatementCallback; SQL [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]; ERROR: new row for relation "transactions" violates check constraint "chk_debit_status"
+  Detail: Failing row contains (c5f010bb-de42-46a7-80fb-b2046dc10722, bdeb26c9-7b44-4e42-847f-4d7157d6159d, INV-20250727-005, TXN_1753663684287_1773, idemp-20250727-005, 100.00, NGN, 1.50, 98.50, 0, SUCCESS, DEBITED, null, 2025-07-28 01:48:04.290684+01, 2025-07-28 01:48:04.915901+01).
+org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]; ERROR: new row for relation "transactions" violates check constraint "chk_debit_status"
+  Detail: Failing row contains (c5f010bb-de42-46a7-80fb-b2046dc10722, bdeb26c9-7b44-4e42-847f-4d7157d6159d, INV-20250727-005, TXN_1753663684287_1773, idemp-20250727-005, 100.00, NGN, 1.50, 98.50, 0, SUCCESS, DEBITED, null, 2025-07-28 01:48:04.290684+01, 2025-07-28 01:48:04.915901+01).
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:118)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Assembly trace from producer [reactor.core.publisher.MonoError] :
+
+Error has been observed at the following site(s):
+	*___________________Mono.onErrorMap ⇢ at org.springframework.core.CoroutinesUtils.invokeSuspendingFunction(CoroutinesUtils.java:146)
+	|_                Mono.contextWrite ⇢ at kotlinx.coroutines.reactor.ReactorContextInjector.injectCoroutineContext(ReactorContextInjector.kt:17)
+	*_______________________Mono.create ⇢ at kotlinx.coroutines.reactor.MonoKt.monoInternal(Mono.kt:83)
+	|_                      Mono.filter ⇢ at org.springframework.core.CoroutinesUtils.invokeSuspendingFunction(CoroutinesUtils.java:145)
+	|_                  Mono.onErrorMap ⇢ at org.springframework.core.CoroutinesUtils.invokeSuspendingFunction(CoroutinesUtils.java:146)
+	|_                Mono.contextWrite ⇢ at kotlinx.coroutines.reactor.ReactorContextInjector.injectCoroutineContext(ReactorContextInjector.kt:17)
+	*__MonoCreate$DefaultMonoSink.error ⇢ at kotlinx.coroutines.reactor.MonoCoroutine.onCancelled(Mono.kt:109)
+Original Stack Trace:
+		at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:118)
+		at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+		at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:116)
+		at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556)
+		at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677)
+		at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972)
+		at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:993)
+		at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:337)
+		at com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update$suspendImpl(PostgresTransactionRepository.kt:103)
+		at com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update(PostgresTransactionRepository.kt)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at kotlin.reflect.jvm.internal.calls.CallerImpl$Method.callMethod(CallerImpl.kt:97)
+		at kotlin.reflect.jvm.internal.calls.CallerImpl$Method$Instance.call(CallerImpl.kt:113)
+		at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:207)
+		at kotlin.reflect.full.KCallables.callSuspendBy(KCallables.kt:74)
+		at org.springframework.core.CoroutinesUtils.lambda$invokeSuspendingFunction$3(CoroutinesUtils.java:143)
+		at kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4.invokeSuspend(IntrinsicsJvm.kt:270)
+		at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith$$$capture(ContinuationImpl.kt:33)
+		at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt)
+		at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+		at kotlinx.coroutines.EventLoop.processUnconfinedEvent(EventLoop.common.kt:65)
+		at kotlinx.coroutines.DispatchedTaskKt.resumeUnconfined(DispatchedTask.kt:241)
+		at kotlinx.coroutines.DispatchedTaskKt.dispatch(DispatchedTask.kt:159)
+		at kotlinx.coroutines.CancellableContinuationImpl.dispatchResume(CancellableContinuationImpl.kt:466)
+		at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl(CancellableContinuationImpl.kt:500)
+		at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$default(CancellableContinuationImpl.kt:489)
+		at kotlinx.coroutines.CancellableContinuationImpl.resumeUndispatched(CancellableContinuationImpl.kt:587)
+		at kotlinx.coroutines.EventLoopImplBase$DelayedResumeTask.run(EventLoop.common.kt:490)
+		at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+		at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.postgresql.util.PSQLException: ERROR: new row for relation "transactions" violates check constraint "chk_debit_status"
+  Detail: Failing row contains (c5f010bb-de42-46a7-80fb-b2046dc10722, bdeb26c9-7b44-4e42-847f-4d7157d6159d, INV-20250727-005, TXN_1753663684287_1773, idemp-20250727-005, 100.00, NGN, 1.50, 98.50, 0, SUCCESS, DEBITED, null, 2025-07-28 01:48:04.290684+01, 2025-07-28 01:48:04.915901+01).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2734)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:993)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:337)
+	at com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update$suspendImpl(PostgresTransactionRepository.kt:103)
+	at com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update(PostgresTransactionRepository.kt)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method.callMethod(CallerImpl.kt:97)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method$Instance.call(CallerImpl.kt:113)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:207)
+	at kotlin.reflect.full.KCallables.callSuspendBy(KCallables.kt:74)
+	at org.springframework.core.CoroutinesUtils.lambda$invokeSuspendingFunction$3(CoroutinesUtils.java:143)
+	at kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4.invokeSuspend(IntrinsicsJvm.kt:270)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith$$$capture(ContinuationImpl.kt:33)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.EventLoop.processUnconfinedEvent(EventLoop.common.kt:65)
+	at kotlinx.coroutines.DispatchedTaskKt.resumeUnconfined(DispatchedTask.kt:241)
+	at kotlinx.coroutines.DispatchedTaskKt.dispatch(DispatchedTask.kt:159)
+	at kotlinx.coroutines.CancellableContinuationImpl.dispatchResume(CancellableContinuationImpl.kt:466)
+	at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl(CancellableContinuationImpl.kt:500)
+	at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$default(CancellableContinuationImpl.kt:489)
+	at kotlinx.coroutines.CancellableContinuationImpl.resumeUndispatched(CancellableContinuationImpl.kt:587)
+	at kotlinx.coroutines.EventLoopImplBase$DelayedResumeTask.run(EventLoop.common.kt:490)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+	at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-07-28 01:55:07.622 [HikariPool-1:housekeeper] WARN  [com.zaxxer.hikari.pool.PoolBase] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1d36509f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-07-28 01:55:09.680 [HikariPool-1:housekeeper] WARN  [com.zaxxer.hikari.pool.PoolBase] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2e32952b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-07-28 01:55:38.981 [HikariPool-1:housekeeper] WARN  [com.zaxxer.hikari.pool.PoolBase] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@66422be3 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-07-28 01:55:52.754 [HikariPool-1:housekeeper] WARN  [com.zaxxer.hikari.pool.PoolBase] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@79cf4ce9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-07-28 01:56:12.063 [HikariPool-1:housekeeper] WARN  [com.zaxxer.hikari.pool.PoolBase] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@17dfe005 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-07-28 02:03:31.578 [SpringApplicationShutdownHook] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-28 02:03:31.595 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
+2025-07-28 02:03:31.639 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 02:03:31.640 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 02:03:36.791 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 61820 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:03:36.792 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:03:36.817 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 02:03:36.817 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 02:03:37.620 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 02:03:37.627 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 02:03:37.628 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-28 02:03:37.649 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 02:03:37.649 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 831 ms
+2025-07-28 02:03:38.128 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 02:03:38.131 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 02:03:38.197 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+2025-07-28 02:03:38.208 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 1.637 seconds (process running for 3.365)
+2025-07-28 02:04:06.246 [http-nio-8080-exec-2] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 02:04:06.247 [http-nio-8080-exec-2] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 02:04:06.248 [http-nio-8080-exec-2] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 02:04:06.428 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Victor's Store, email=victor@example.com, settlementAccount=1234567890, balance=10000)
+2025-07-28 02:04:06.430 [http-nio-8080-exec-2] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: CreateMerchantCommand to CreateMerchantCommandHandler
+2025-07-28 02:04:06.430 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Handling CreateMerchantCommand for email: victor@example.com
+2025-07-28 02:04:06.445 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:04:06.446 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT 1 FROM merchants WHERE email = ? LIMIT 1]
+2025-07-28 02:04:06.448 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:06.449 [http-nio-8080-exec-2] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-07-28 02:04:06.553 [http-nio-8080-exec-2] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59a52c9b
+2025-07-28 02:04:06.554 [http-nio-8080-exec-2] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-07-28 02:04:06.580 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:04:06.581 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@2034353833 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] for JDBC transaction
+2025-07-28 02:04:06.582 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@2034353833 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] to manual commit
+2025-07-28 02:04:06.583 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:04:06.583 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@2034353833 wrapping org.postgresql.jdbc.PgConnection@59a52c9b]
+2025-07-28 02:04:06.583 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@2034353833 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] after transaction
+2025-07-28 02:04:06.584 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:04:06.584 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 02:04:06.584 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:06.588 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:04:06.588 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 02:04:06.588 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:06.590 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Successfully saved merchant with ID: f55d7f4a-5b66-4571-a8bb-85cc926bfbb0
+2025-07-28 02:04:06.591 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: f55d7f4a-5b66-4571-a8bb-85cc926bfbb0
+2025-07-28 02:04:20.249 [http-nio-8080-exec-3] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=f55d7f4a-5b66-4571-a8bb-85cc926bfbb0, merchantRef=INV-20250727-005, amount=100, currency=NGN, idempotencyKey=idemp-20250727-005)
+2025-07-28 02:04:20.250 [http-nio-8080-exec-3] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 02:04:20.250 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:04:20.251 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@737643031 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] for JDBC transaction
+2025-07-28 02:04:20.251 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@737643031 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] to manual commit
+2025-07-28 02:04:20.254 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:04:20.254 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@737643031 wrapping org.postgresql.jdbc.PgConnection@59a52c9b]
+2025-07-28 02:04:20.254 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@737643031 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] after transaction
+2025-07-28 02:04:20.261 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-005
+2025-07-28 02:04:20.261 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:04:20.261 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 02:04:20.261 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:20.268 [http-nio-8080-exec-3] WARN  [c.p.c.i.r.PostgresTransactionRepository] - Query returned no result or failed: Incorrect result size: expected 1, actual 0
+2025-07-28 02:04:20.269 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:04:20.269 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 02:04:20.269 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:20.275 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Saving new transaction: ID = 3d109b85-76df-4a76-bdb6-1246224a0727, Status = INITIATED, Amount = 100
+2025-07-28 02:04:20.275 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:04:20.275 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO transactions (
+    id, merchant_id, merchant_ref, internal_ref, amount, currency,
+    fee, net_amount, retry_count, status, idempotency_key,
+    customer_simulated_debit_status, settlement_batch_id, created_at, updated_at
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?, ?
+)]
+2025-07-28 02:04:20.275 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:20.283 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction saved: ID = 3d109b85-76df-4a76-bdb6-1246224a0727, rows affected = 1
+2025-07-28 02:04:20.283 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 3d109b85-76df-4a76-bdb6-1246224a0727
+2025-07-28 02:04:20.284 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:04:20.284 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 02:04:20.284 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:20.285 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 3d109b85-76df-4a76-bdb6-1246224a0727
+2025-07-28 02:04:20.799 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:04:20.801 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@545892997 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] for JDBC transaction
+2025-07-28 02:04:20.802 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@545892997 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] to manual commit
+2025-07-28 02:04:20.803 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:04:20.803 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@545892997 wrapping org.postgresql.jdbc.PgConnection@59a52c9b]
+2025-07-28 02:04:20.803 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@545892997 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] after transaction
+2025-07-28 02:04:20.804 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:04:20.805 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 02:04:20.805 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:20.815 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:04:20.816 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 02:04:20.816 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:20.821 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:04:20.821 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1491849809 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] for JDBC transaction
+2025-07-28 02:04:20.821 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1491849809 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] to manual commit
+2025-07-28 02:04:20.822 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:04:20.823 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1491849809 wrapping org.postgresql.jdbc.PgConnection@59a52c9b]
+2025-07-28 02:04:20.823 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1491849809 wrapping org.postgresql.jdbc.PgConnection@59a52c9b] after transaction
+2025-07-28 02:04:20.825 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Updating transaction: ID = 3d109b85-76df-4a76-bdb6-1246224a0727, Status = SUCCESS, RetryCount = 0
+2025-07-28 02:04:20.826 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:04:20.826 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]
+2025-07-28 02:04:20.826 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:04:20.846 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.s.SQLStateSQLExceptionTranslator] - Extracted SQL state class '23' from value '23514'
+2025-07-28 02:04:20.852 [kotlinx.coroutines.DefaultExecutor] ERROR [c.p.c.p.c.TransactionController] - Unexpected error occurred: PreparedStatementCallback; SQL [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]; ERROR: new row for relation "transactions" violates check constraint "transactions_customer_simulated_debit_status_check"
+  Detail: Failing row contains (3d109b85-76df-4a76-bdb6-1246224a0727, f55d7f4a-5b66-4571-a8bb-85cc926bfbb0, INV-20250727-005, TXN_1753664660271_7483, idemp-20250727-005, 100.00, NGN, 1.50, 98.50, 0, SUCCESS, DEBITED, null, 2025-07-28 02:04:20.273863+01, 2025-07-28 02:04:20.827075+01).
+org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]; ERROR: new row for relation "transactions" violates check constraint "transactions_customer_simulated_debit_status_check"
+  Detail: Failing row contains (3d109b85-76df-4a76-bdb6-1246224a0727, f55d7f4a-5b66-4571-a8bb-85cc926bfbb0, INV-20250727-005, TXN_1753664660271_7483, idemp-20250727-005, 100.00, NGN, 1.50, 98.50, 0, SUCCESS, DEBITED, null, 2025-07-28 02:04:20.273863+01, 2025-07-28 02:04:20.827075+01).
+	at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:118)
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Assembly trace from producer [reactor.core.publisher.MonoError] :
+
+Error has been observed at the following site(s):
+	*___________________Mono.onErrorMap ⇢ at org.springframework.core.CoroutinesUtils.invokeSuspendingFunction(CoroutinesUtils.java:146)
+	|_                Mono.contextWrite ⇢ at kotlinx.coroutines.reactor.ReactorContextInjector.injectCoroutineContext(ReactorContextInjector.kt:17)
+	*_______________________Mono.create ⇢ at kotlinx.coroutines.reactor.MonoKt.monoInternal(Mono.kt:83)
+	|_                      Mono.filter ⇢ at org.springframework.core.CoroutinesUtils.invokeSuspendingFunction(CoroutinesUtils.java:145)
+	|_                  Mono.onErrorMap ⇢ at org.springframework.core.CoroutinesUtils.invokeSuspendingFunction(CoroutinesUtils.java:146)
+	|_                Mono.contextWrite ⇢ at kotlinx.coroutines.reactor.ReactorContextInjector.injectCoroutineContext(ReactorContextInjector.kt:17)
+	*__MonoCreate$DefaultMonoSink.error ⇢ at kotlinx.coroutines.reactor.MonoCoroutine.onCancelled(Mono.kt:109)
+Original Stack Trace:
+		at org.springframework.jdbc.support.SQLStateSQLExceptionTranslator.doTranslate(SQLStateSQLExceptionTranslator.java:118)
+		at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:107)
+		at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:116)
+		at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1556)
+		at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:677)
+		at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972)
+		at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:993)
+		at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:337)
+		at com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update$suspendImpl(PostgresTransactionRepository.kt:103)
+		at com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update(PostgresTransactionRepository.kt)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at kotlin.reflect.jvm.internal.calls.CallerImpl$Method.callMethod(CallerImpl.kt:97)
+		at kotlin.reflect.jvm.internal.calls.CallerImpl$Method$Instance.call(CallerImpl.kt:113)
+		at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:207)
+		at kotlin.reflect.full.KCallables.callSuspendBy(KCallables.kt:74)
+		at org.springframework.core.CoroutinesUtils.lambda$invokeSuspendingFunction$3(CoroutinesUtils.java:143)
+		at kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4.invokeSuspend(IntrinsicsJvm.kt:270)
+		at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith$$$capture(ContinuationImpl.kt:33)
+		at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt)
+		at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+		at kotlinx.coroutines.EventLoop.processUnconfinedEvent(EventLoop.common.kt:65)
+		at kotlinx.coroutines.DispatchedTaskKt.resumeUnconfined(DispatchedTask.kt:241)
+		at kotlinx.coroutines.DispatchedTaskKt.dispatch(DispatchedTask.kt:159)
+		at kotlinx.coroutines.CancellableContinuationImpl.dispatchResume(CancellableContinuationImpl.kt:466)
+		at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl(CancellableContinuationImpl.kt:500)
+		at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$default(CancellableContinuationImpl.kt:489)
+		at kotlinx.coroutines.CancellableContinuationImpl.resumeUndispatched(CancellableContinuationImpl.kt:587)
+		at kotlinx.coroutines.EventLoopImplBase$DelayedResumeTask.run(EventLoop.common.kt:490)
+		at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+		at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.postgresql.util.PSQLException: ERROR: new row for relation "transactions" violates check constraint "transactions_customer_simulated_debit_status_check"
+  Detail: Failing row contains (3d109b85-76df-4a76-bdb6-1246224a0727, f55d7f4a-5b66-4571-a8bb-85cc926bfbb0, INV-20250727-005, TXN_1753664660271_7483, idemp-20250727-005, 100.00, NGN, 1.50, 98.50, 0, SUCCESS, DEBITED, null, 2025-07-28 02:04:20.273863+01, 2025-07-28 02:04:20.827075+01).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2734)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2421)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:518)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:435)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate.lambda$update$2(JdbcTemplate.java:977)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:658)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:972)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:993)
+	at org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.update(NamedParameterJdbcTemplate.java:337)
+	at com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update$suspendImpl(PostgresTransactionRepository.kt:103)
+	at com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update(PostgresTransactionRepository.kt)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method.callMethod(CallerImpl.kt:97)
+	at kotlin.reflect.jvm.internal.calls.CallerImpl$Method$Instance.call(CallerImpl.kt:113)
+	at kotlin.reflect.jvm.internal.KCallableImpl.callDefaultMethod$kotlin_reflection(KCallableImpl.kt:207)
+	at kotlin.reflect.full.KCallables.callSuspendBy(KCallables.kt:74)
+	at org.springframework.core.CoroutinesUtils.lambda$invokeSuspendingFunction$3(CoroutinesUtils.java:143)
+	at kotlin.coroutines.intrinsics.IntrinsicsKt__IntrinsicsJvmKt$createCoroutineUnintercepted$$inlined$createCoroutineFromSuspendFunction$IntrinsicsKt__IntrinsicsJvmKt$4.invokeSuspend(IntrinsicsJvm.kt:270)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith$$$capture(ContinuationImpl.kt:33)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.EventLoop.processUnconfinedEvent(EventLoop.common.kt:65)
+	at kotlinx.coroutines.DispatchedTaskKt.resumeUnconfined(DispatchedTask.kt:241)
+	at kotlinx.coroutines.DispatchedTaskKt.dispatch(DispatchedTask.kt:159)
+	at kotlinx.coroutines.CancellableContinuationImpl.dispatchResume(CancellableContinuationImpl.kt:466)
+	at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl(CancellableContinuationImpl.kt:500)
+	at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$default(CancellableContinuationImpl.kt:489)
+	at kotlinx.coroutines.CancellableContinuationImpl.resumeUndispatched(CancellableContinuationImpl.kt:587)
+	at kotlinx.coroutines.EventLoopImplBase$DelayedResumeTask.run(EventLoop.common.kt:490)
+	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:277)
+	at kotlinx.coroutines.DefaultExecutor.run(DefaultExecutor.kt:105)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-07-28 02:15:51.266 [HikariPool-1:housekeeper] WARN  [com.zaxxer.hikari.pool.PoolBase] - HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@a41ed0c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2025-07-28 02:16:41.943 [SpringApplicationShutdownHook] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-28 02:16:41.959 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
+2025-07-28 02:16:42.000 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 02:16:42.002 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 02:16:47.650 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 62314 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:16:47.651 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:16:47.675 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 02:16:47.675 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 02:16:48.541 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 02:16:48.548 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 02:16:48.548 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-28 02:16:48.574 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 02:16:48.574 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 899 ms
+2025-07-28 02:16:49.060 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 02:16:49.063 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 02:16:49.126 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+2025-07-28 02:16:49.137 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 1.694 seconds (process running for 3.243)
+2025-07-28 02:17:00.554 [http-nio-8080-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 02:17:00.554 [http-nio-8080-exec-1] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 02:17:00.557 [http-nio-8080-exec-1] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 3 ms
+2025-07-28 02:17:00.713 [http-nio-8080-exec-1] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Victor's Store, email=victor@example.com, settlementAccount=1234567890, balance=10000)
+2025-07-28 02:17:00.715 [http-nio-8080-exec-1] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: CreateMerchantCommand to CreateMerchantCommandHandler
+2025-07-28 02:17:00.715 [http-nio-8080-exec-1] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Handling CreateMerchantCommand for email: victor@example.com
+2025-07-28 02:17:00.727 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:17:00.728 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT 1 FROM merchants WHERE email = ? LIMIT 1]
+2025-07-28 02:17:00.729 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:00.730 [http-nio-8080-exec-1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-07-28 02:17:00.827 [http-nio-8080-exec-1] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@238c126b
+2025-07-28 02:17:00.829 [http-nio-8080-exec-1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-07-28 02:17:00.851 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:17:00.853 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@285105852 wrapping org.postgresql.jdbc.PgConnection@238c126b] for JDBC transaction
+2025-07-28 02:17:00.853 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@285105852 wrapping org.postgresql.jdbc.PgConnection@238c126b] to manual commit
+2025-07-28 02:17:00.854 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:17:00.854 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@285105852 wrapping org.postgresql.jdbc.PgConnection@238c126b]
+2025-07-28 02:17:00.854 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@285105852 wrapping org.postgresql.jdbc.PgConnection@238c126b] after transaction
+2025-07-28 02:17:00.855 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:17:00.855 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 02:17:00.855 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:00.858 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:17:00.858 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 02:17:00.858 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:00.859 [http-nio-8080-exec-1] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Successfully saved merchant with ID: 7f970a0d-169c-4794-ab75-b984e299678c
+2025-07-28 02:17:00.861 [http-nio-8080-exec-1] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 7f970a0d-169c-4794-ab75-b984e299678c
+2025-07-28 02:17:11.268 [http-nio-8080-exec-3] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=7f970a0d-169c-4794-ab75-b984e299678c, merchantRef=INV-20250727-005, amount=100, currency=NGN, idempotencyKey=idemp-20250727-005)
+2025-07-28 02:17:11.269 [http-nio-8080-exec-3] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 02:17:11.269 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:17:11.270 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@737643031 wrapping org.postgresql.jdbc.PgConnection@238c126b] for JDBC transaction
+2025-07-28 02:17:11.270 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@737643031 wrapping org.postgresql.jdbc.PgConnection@238c126b] to manual commit
+2025-07-28 02:17:11.275 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:17:11.275 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@737643031 wrapping org.postgresql.jdbc.PgConnection@238c126b]
+2025-07-28 02:17:11.276 [http-nio-8080-exec-3] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@737643031 wrapping org.postgresql.jdbc.PgConnection@238c126b] after transaction
+2025-07-28 02:17:11.285 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-005
+2025-07-28 02:17:11.285 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:17:11.285 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 02:17:11.285 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:11.291 [http-nio-8080-exec-3] WARN  [c.p.c.i.r.PostgresTransactionRepository] - Query returned no result or failed: Incorrect result size: expected 1, actual 0
+2025-07-28 02:17:11.292 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:17:11.292 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 02:17:11.292 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:11.297 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Saving new transaction: ID = 0ea57cce-bf89-491e-8a5d-915a2ed5f02d, Status = INITIATED, Amount = 100
+2025-07-28 02:17:11.298 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:17:11.298 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO transactions (
+    id, merchant_id, merchant_ref, internal_ref, amount, currency,
+    fee, net_amount, retry_count, status, idempotency_key,
+    customer_simulated_debit_status, settlement_batch_id, created_at, updated_at
+) VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?,
+    ?, ?, ?, ?
+)]
+2025-07-28 02:17:11.298 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:11.307 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction saved: ID = 0ea57cce-bf89-491e-8a5d-915a2ed5f02d, rows affected = 1
+2025-07-28 02:17:11.307 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 0ea57cce-bf89-491e-8a5d-915a2ed5f02d
+2025-07-28 02:17:11.307 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:17:11.307 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 02:17:11.307 [http-nio-8080-exec-3] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:11.308 [http-nio-8080-exec-3] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 0ea57cce-bf89-491e-8a5d-915a2ed5f02d
+2025-07-28 02:17:11.816 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresMerchantRepository.save]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:17:11.817 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1312786370 wrapping org.postgresql.jdbc.PgConnection@238c126b] for JDBC transaction
+2025-07-28 02:17:11.817 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1312786370 wrapping org.postgresql.jdbc.PgConnection@238c126b] to manual commit
+2025-07-28 02:17:11.818 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:17:11.818 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1312786370 wrapping org.postgresql.jdbc.PgConnection@238c126b]
+2025-07-28 02:17:11.819 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1312786370 wrapping org.postgresql.jdbc.PgConnection@238c126b] after transaction
+2025-07-28 02:17:11.820 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:17:11.820 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO merchants (
+    id, business_name, email, settlement_account, status, 
+    balance, locked_balance, failed_attempts
+)
+VALUES (
+    ?, ?, ?, ?, ?, 
+    ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    business_name = EXCLUDED.business_name,
+    email = EXCLUDED.email,
+    settlement_account = EXCLUDED.settlement_account,
+    status = EXCLUDED.status,
+    balance = EXCLUDED.balance,
+    locked_balance = EXCLUDED.locked_balance,
+    failed_attempts = EXCLUDED.failed_attempts]
+2025-07-28 02:17:11.820 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:11.825 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:17:11.825 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 02:17:11.825 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:11.828 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresTransactionRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:17:11.828 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@258047114 wrapping org.postgresql.jdbc.PgConnection@238c126b] for JDBC transaction
+2025-07-28 02:17:11.828 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@258047114 wrapping org.postgresql.jdbc.PgConnection@238c126b] to manual commit
+2025-07-28 02:17:11.829 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:17:11.829 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@258047114 wrapping org.postgresql.jdbc.PgConnection@238c126b]
+2025-07-28 02:17:11.829 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@258047114 wrapping org.postgresql.jdbc.PgConnection@238c126b] after transaction
+2025-07-28 02:17:11.831 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Updating transaction: ID = 0ea57cce-bf89-491e-8a5d-915a2ed5f02d, Status = SUCCESS, RetryCount = 0
+2025-07-28 02:17:11.832 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:17:11.832 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions 
+SET status = ?, 
+    customer_simulated_debit_status = ?,
+    retry_count = ?,
+    settlement_batch_id = ?,
+    updated_at = ?
+WHERE id = ?]
+2025-07-28 02:17:11.832 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:11.834 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction updated: ID = 0ea57cce-bf89-491e-8a5d-915a2ed5f02d, rows affected = 1
+2025-07-28 02:17:11.834 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - 🔍 Searching for transaction by ID = 0ea57cce-bf89-491e-8a5d-915a2ed5f02d
+2025-07-28 02:17:11.835 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:17:11.835 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE id = ?]
+2025-07-28 02:17:11.835 [kotlinx.coroutines.DefaultExecutor] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:17:11.836 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = 0ea57cce-bf89-491e-8a5d-915a2ed5f02d
+2025-07-28 02:17:11.839 [kotlinx.coroutines.DefaultExecutor] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: 0ea57cce-bf89-491e-8a5d-915a2ed5f02d
+2025-07-28 02:21:25.342 [http-nio-8080-exec-7] INFO  [c.p.c.p.c.TransactionController] - Received ListTransactionsRequest for merchant: 7f970a0d-169c-4794-ab75-b984e299678c with filters: status=SUCCESS, fromDate=2025-07-27T00:00, toDate=2025-07-29T00:00, page=0, size=20
+2025-07-28 02:21:25.343 [http-nio-8080-exec-7] INFO  [c.p.c.infrastructure.SimpleQueryBus] - Dispatching query: ListTransactionsQuery to ListTransactionsQueryHandler
+2025-07-28 02:21:25.344 [http-nio-8080-exec-7] INFO  [c.p.c.a.q.ListTransactionsQueryHandler] - Handling ListTransactionsQuery for merchant: 7f970a0d-169c-4794-ab75-b984e299678c
+2025-07-28 02:21:25.345 [http-nio-8080-exec-7] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:21:25.345 [http-nio-8080-exec-7] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 02:21:25.345 [http-nio-8080-exec-7] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:21:25.360 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:21:25.360 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT COUNT(*) 
+FROM transactions 
+WHERE merchant_id = ? AND status = ? AND created_at >= ? AND created_at <= ?]
+2025-07-28 02:21:25.360 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:21:25.365 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:21:25.365 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT 
+    id,
+    merchant_id,
+    merchant_ref,
+    internal_ref,
+    idempotency_key,
+    amount,
+    currency,
+    fee,
+    net_amount,
+    retry_count,
+    status,
+    customer_simulated_debit_status,
+    settlement_batch_id,
+    created_at,
+    updated_at
+FROM transactions 
+WHERE merchant_id = ? AND status = ? AND created_at >= ? AND created_at <= ?
+ORDER BY created_at DESC, id DESC
+LIMIT ? OFFSET ?]
+2025-07-28 02:21:25.365 [DefaultDispatcher-worker-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:21:25.368 [DefaultDispatcher-worker-1] INFO  [c.p.c.a.q.ListTransactionsQueryHandler] - Retrieved 1 transactions for merchant: 7f970a0d-169c-4794-ab75-b984e299678c
+2025-07-28 02:21:25.369 [DefaultDispatcher-worker-1] INFO  [c.p.c.p.c.TransactionController] - Successfully retrieved 1 transactions for merchant: 7f970a0d-169c-4794-ab75-b984e299678c
+2025-07-28 02:23:17.672 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.SettlementController] - Received request to settle transactions for merchant: 7f970a0d-169c-4794-ab75-b984e299678c, limit: 100
+2025-07-28 02:23:22.741 [http-nio-8080-exec-2] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: SettleTransactionsCommand to SettleTransactionsHandler$$SpringCGLIB$$0
+2025-07-28 02:23:22.744 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.commandhandlers.SettleTransactionsHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:23:22.748 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@941331194 wrapping org.postgresql.jdbc.PgConnection@238c126b] for JDBC transaction
+2025-07-28 02:23:22.749 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@941331194 wrapping org.postgresql.jdbc.PgConnection@238c126b] to manual commit
+2025-07-28 02:23:22.780 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:23:22.780 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@941331194 wrapping org.postgresql.jdbc.PgConnection@238c126b]
+2025-07-28 02:23:22.781 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@941331194 wrapping org.postgresql.jdbc.PgConnection@238c126b] after transaction
+2025-07-28 02:23:22.791 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.SettleTransactionsHandler] - Starting settlement process for merchant: 7f970a0d-169c-4794-ab75-b984e299678c, limit: 100
+2025-07-28 02:23:22.795 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:23:22.795 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT id, business_name, email, settlement_account, status, 
+       balance, locked_balance, failed_attempts, created_at, updated_at
+FROM merchants
+WHERE id = ?]
+2025-07-28 02:23:22.795 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:23:22.806 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:23:22.806 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions
+WHERE merchant_id = ?
+  AND status = ?
+  AND settlement_batch_id IS NULL
+ORDER BY created_at ASC
+LIMIT ?]
+2025-07-28 02:23:22.806 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:23:22.812 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.SettleTransactionsHandler] - Settlement calculation - Total amount: 100.00, Total fee: 1.50, Transaction count: 1
+2025-07-28 02:23:22.816 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresSettlementRepository.saveSettlementBatch]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:23:22.817 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1890710790 wrapping org.postgresql.jdbc.PgConnection@238c126b] for JDBC transaction
+2025-07-28 02:23:22.817 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1890710790 wrapping org.postgresql.jdbc.PgConnection@238c126b] to manual commit
+2025-07-28 02:23:22.817 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:23:22.817 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1890710790 wrapping org.postgresql.jdbc.PgConnection@238c126b]
+2025-07-28 02:23:22.817 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1890710790 wrapping org.postgresql.jdbc.PgConnection@238c126b] after transaction
+2025-07-28 02:23:22.818 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:23:22.818 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [INSERT INTO settlement_batches (
+    id, batch_ref, merchant_id, total_amount, total_fee, net_amount,
+    currency, transaction_count, status, created_at, updated_at
+)
+VALUES (
+    ?, ?, ?, ?, ?, ?,
+    ?, ?, ?, ?, ?
+)
+ON CONFLICT (id) DO UPDATE SET
+    status = EXCLUDED.status,
+    updated_at = EXCLUDED.updated_at]
+2025-07-28 02:23:22.818 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:23:22.837 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 02:23:22.837 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM settlement_batches
+WHERE id = ?]
+2025-07-28 02:23:22.837 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:23:22.839 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.infrastructure.repository.PostgresSettlementRepository.updateTransactionsWithBatch]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 02:23:22.839 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1644954587 wrapping org.postgresql.jdbc.PgConnection@238c126b] for JDBC transaction
+2025-07-28 02:23:22.839 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1644954587 wrapping org.postgresql.jdbc.PgConnection@238c126b] to manual commit
+2025-07-28 02:23:22.841 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 02:23:22.841 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1644954587 wrapping org.postgresql.jdbc.PgConnection@238c126b]
+2025-07-28 02:23:22.841 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1644954587 wrapping org.postgresql.jdbc.PgConnection@238c126b] after transaction
+2025-07-28 02:23:22.841 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL update
+2025-07-28 02:23:22.841 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [UPDATE transactions
+SET settlement_batch_id = ?,
+    status = ?,
+    updated_at = now() at time zone 'UTC'
+WHERE id = ANY(?)
+  AND status = ?
+  AND settlement_batch_id IS NULL]
+2025-07-28 02:23:22.841 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 02:23:22.849 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.SettleTransactionsHandler] - Settlement batch created successfully: b9b792f4-51b7-4324-abf6-39728a6c8e6c with 1 transactions
+2025-07-28 02:23:28.726 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.SettlementController] - Successfully settled 1 transactions into batch b9b792f4-51b7-4324-abf6-39728a6c8e6c
+2025-07-28 02:26:42.860 [SpringApplicationShutdownHook] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-28 02:26:42.881 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
+2025-07-28 02:26:42.931 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 02:26:42.933 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 02:31:11.994 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 62803 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:31:11.995 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:31:13.106 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 02:31:13.106 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 02:31:13.107 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 02:31:13.173 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.349 seconds (process running for 1.937)
+2025-07-28 02:37:11.361 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 62997 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:37:11.362 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:37:12.397 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 02:37:12.397 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 02:37:12.398 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 02:37:12.467 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.275 seconds (process running for 1.79)
+2025-07-28 02:40:22.728 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 63109 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:40:22.729 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:40:23.721 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 02:40:23.721 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 02:40:23.722 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 02:40:23.780 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.205 seconds (process running for 1.811)
+2025-07-28 02:40:23.802 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest$EdgeCases] - Starting MerchantControllerTest.EdgeCases using Java 17.0.9 with PID 63109 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:40:23.802 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest$EdgeCases] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:40:23.992 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 02:40:23.992 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 02:40:23.992 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 02:40:23.996 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest$EdgeCases] - Started MerchantControllerTest.EdgeCases in 0.211 seconds (process running for 2.027)
+2025-07-28 02:40:24.237 [Test worker] INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [com.paymentsystem.core.presentation.controllers.MerchantControllerTest$ErrorHandling]: ErrorHandling does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-28 02:40:24.245 [Test worker] INFO  [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration com.paymentsystem.core.PaymentInitiationSystemApplication for test class com.paymentsystem.core.presentation.controllers.MerchantControllerTest$ErrorHandling
+2025-07-28 02:40:24.281 [Test worker] INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [com.paymentsystem.core.presentation.controllers.MerchantControllerTest$SuccessfulCreation]: SuccessfulCreation does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-28 02:40:24.289 [Test worker] INFO  [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration com.paymentsystem.core.PaymentInitiationSystemApplication for test class com.paymentsystem.core.presentation.controllers.MerchantControllerTest$SuccessfulCreation
+2025-07-28 02:40:24.313 [Test worker] INFO  [o.s.t.c.s.AnnotationConfigContextLoaderUtils] - Could not detect default configuration classes for test class [com.paymentsystem.core.presentation.controllers.MerchantControllerTest$ValidationTests]: ValidationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-28 02:40:24.334 [Test worker] INFO  [o.s.b.t.c.SpringBootTestContextBootstrapper] - Found @SpringBootConfiguration com.paymentsystem.core.PaymentInitiationSystemApplication for test class com.paymentsystem.core.presentation.controllers.MerchantControllerTest$ValidationTests
+2025-07-28 02:42:14.806 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative1] - Starting MerchantControllerTestAlternative1 using Java 17.0.9 with PID 63177 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:42:14.806 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative1] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:42:15.732 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 02:42:15.733 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 02:42:15.733 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 02:42:15.796 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative1] - Started MerchantControllerTestAlternative1 in 1.143 seconds (process running for 1.749)
+2025-07-28 02:43:18.140 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative2] - Starting MerchantControllerTestAlternative2 using Java 17.0.9 with PID 63224 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:43:18.142 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative2] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:43:19.053 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 02:43:19.053 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 02:43:19.054 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 02:43:19.124 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative2] - Started MerchantControllerTestAlternative2 in 1.145 seconds (process running for 1.645)
+2025-07-28 02:43:19.417 [Test worker @coroutine#4] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business Corp, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 02:43:19.421 [Test worker @coroutine#4] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: f7c80b33-754f-45de-87bf-167987ec8d03
+2025-07-28 02:43:39.465 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative2] - Starting MerchantControllerTestAlternative2 using Java 17.0.9 with PID 63252 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 02:43:39.466 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative2] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 02:43:40.404 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 02:43:40.404 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 02:43:40.405 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 02:43:40.472 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTestAlternative2] - Started MerchantControllerTestAlternative2 in 1.172 seconds (process running for 1.682)
+2025-07-28 02:43:40.786 [Test worker @coroutine#4] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business Corp, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 02:43:40.790 [Test worker @coroutine#4] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: c091f349-bbcc-4225-800f-74899159c91e
+2025-07-28 03:03:07.514 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 63889 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 03:03:07.515 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 03:03:08.443 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 03:03:08.444 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 03:03:08.444 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 03:03:08.509 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.176 seconds (process running for 1.831)
+2025-07-28 03:03:08.740 [Test worker] WARN  [o.s.w.s.m.s.DefaultHandlerExceptionResolver] - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.Object com.paymentsystem.core.presentation.controllers.MerchantController.createMerchant(com.paymentsystem.core.presentation.request.CreateMerchantRequest,kotlin.coroutines.Continuation<? super org.springframework.http.ResponseEntity<java.lang.Object>>) with 2 errors: [Field error in object 'createMerchantRequest' on field 'businessName': rejected value []; codes [NotBlank.createMerchantRequest.businessName,NotBlank.businessName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createMerchantRequest.businessName,businessName]; arguments []; default message [businessName]]; default message [Business name is required]] [Field error in object 'createMerchantRequest' on field 'businessName': rejected value []; codes [Size.createMerchantRequest.businessName,Size.businessName,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createMerchantRequest.businessName,businessName]; arguments []; default message [businessName],255,2]; default message [Business name must be between 2 and 255 characters]] ]
+2025-07-28 03:08:09.592 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 64166 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 03:08:09.593 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 03:08:10.501 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 03:08:10.501 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 03:08:10.502 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 03:08:10.567 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.134 seconds (process running for 1.923)
+2025-07-28 03:08:10.852 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:08:10.854 [Test worker @coroutine#3] ERROR [c.p.c.p.c.MerchantController] - Unexpected error occurred: Something unexpected happened
+java.lang.RuntimeException: Something unexpected happened
+	at com.paymentsystem.core.presentation.controllers.MerchantControllerTest.createMerchant should return 500 Internal Server Error for unexpected exceptions(MerchantController.kt:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+2025-07-28 03:08:10.906 [Test worker @coroutine#6] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:08:10.907 [Test worker @coroutine#6] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 4d93c720-45d8-4fe5-8ddd-046173d84111
+2025-07-28 03:08:10.930 [Test worker @coroutine#9] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:08:10.931 [Test worker @coroutine#9] WARN  [c.p.c.p.c.MerchantController] - Merchant already exists: Merchant with this email already exists.
+2025-07-28 03:08:10.955 [Test worker] WARN  [o.s.w.s.m.s.DefaultHandlerExceptionResolver] - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.Object com.paymentsystem.core.presentation.controllers.MerchantController.createMerchant(com.paymentsystem.core.presentation.request.CreateMerchantRequest,kotlin.coroutines.Continuation<? super org.springframework.http.ResponseEntity<java.lang.Object>>) with 2 errors: [Field error in object 'createMerchantRequest' on field 'businessName': rejected value []; codes [Size.createMerchantRequest.businessName,Size.businessName,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createMerchantRequest.businessName,businessName]; arguments []; default message [businessName],255,2]; default message [Business name must be between 2 and 255 characters]] [Field error in object 'createMerchantRequest' on field 'businessName': rejected value []; codes [NotBlank.createMerchantRequest.businessName,NotBlank.businessName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createMerchantRequest.businessName,businessName]; arguments []; default message [businessName]]; default message [Business name is required]] ]
+2025-07-28 03:08:10.978 [Test worker @coroutine#14] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:08:10.978 [Test worker @coroutine#14] WARN  [c.p.c.p.c.MerchantController] - Invalid merchant input: Invalid balance amount.
+2025-07-28 03:19:51.125 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 64567 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 03:19:51.126 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 03:19:52.114 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 03:19:52.114 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 03:19:52.115 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 03:19:52.172 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.218 seconds (process running for 2.074)
+2025-07-28 03:19:52.476 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:19:52.477 [Test worker @coroutine#3] ERROR [c.p.c.p.c.MerchantController] - Unexpected error occurred: Something unexpected happened
+java.lang.RuntimeException: Something unexpected happened
+	at com.paymentsystem.core.presentation.controllers.MerchantControllerTest.createMerchant should return 500 Internal Server Error for unexpected exceptions(MerchantController.kt:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+2025-07-28 03:19:52.529 [Test worker @coroutine#6] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:19:52.530 [Test worker @coroutine#6] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 8e406266-cfa7-4700-9299-ed0c08a01306
+2025-07-28 03:19:52.558 [Test worker @coroutine#9] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:19:52.559 [Test worker @coroutine#9] WARN  [c.p.c.p.c.MerchantController] - Merchant already exists: Merchant with this email already exists.
+2025-07-28 03:19:52.587 [Test worker] ERROR [c.p.c.p.GlobalExceptionHandler] - Unexpected error occurred
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public java.lang.Object com.paymentsystem.core.presentation.controllers.MerchantController.createMerchant(com.paymentsystem.core.presentation.request.CreateMerchantRequest,kotlin.coroutines.Continuation<? super org.springframework.http.ResponseEntity<java.lang.Object>>) with 2 errors: [Field error in object 'createMerchantRequest' on field 'businessName': rejected value []; codes [NotBlank.createMerchantRequest.businessName,NotBlank.businessName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createMerchantRequest.businessName,businessName]; arguments []; default message [businessName]]; default message [Business name is required]] [Field error in object 'createMerchantRequest' on field 'businessName': rejected value []; codes [Size.createMerchantRequest.businessName,Size.businessName,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createMerchantRequest.businessName,businessName]; arguments []; default message [businessName],255,2]; default message [Business name must be between 2 and 255 characters]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:159)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:162)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
+	at org.springframework.test.web.servlet.MockHttpServletRequestDsl.perform$spring_test(MockHttpServletRequestDsl.kt:237)
+	at org.springframework.test.web.servlet.MockMvcExtensionsKt.post(MockMvcExtensions.kt:56)
+	at com.paymentsystem.core.presentation.controllers.MerchantControllerTest.createMerchant should return 400 Bad Request for invalid request body (e g, blank businessName)(MerchantController.kt:176)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+2025-07-28 03:19:52.619 [Test worker @coroutine#12] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Business, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:19:52.620 [Test worker @coroutine#12] WARN  [c.p.c.p.c.MerchantController] - Invalid merchant input: Invalid balance amount.
+2025-07-28 03:48:34.028 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 65756 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 03:48:34.029 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 03:48:34.936 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 03:48:34.936 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 03:48:34.937 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 03:48:34.997 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.172 seconds (process running for 2.705)
+2025-07-28 03:48:35.343 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:48:35.347 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 2b8e49d2-fd47-4b68-8e82-bbafa1e8428e
+2025-07-28 03:48:48.089 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 65770 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 03:48:48.090 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 03:48:49.022 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 03:48:49.022 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 03:48:49.023 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 03:48:49.085 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.16 seconds (process running for 1.868)
+2025-07-28 03:48:49.362 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:48:49.366 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 3f8240f3-1917-4d78-91a7-66181bfdb15d
+2025-07-28 03:49:43.276 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 65815 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 03:49:43.277 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 03:49:44.174 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 03:49:44.174 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 03:49:44.175 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 03:49:44.243 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.116 seconds (process running for 1.796)
+2025-07-28 03:49:44.510 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:49:44.513 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 7f710fc0-19e3-4e8a-9072-2badbba8dfc8
+2025-07-28 03:52:46.177 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 65937 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 03:52:46.177 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 03:52:47.119 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 03:52:47.120 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 03:52:47.120 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 03:52:47.189 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.165 seconds (process running for 1.911)
+2025-07-28 03:52:47.498 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:52:47.501 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: a3065e58-5d77-454b-a864-4824a99b6e11
+2025-07-28 03:57:50.413 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 66132 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 03:57:50.414 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 03:57:51.322 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 03:57:51.322 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 03:57:51.323 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 03:57:51.380 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.135 seconds (process running for 1.863)
+2025-07-28 03:57:51.666 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 03:57:51.669 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: a9bddf7c-d2ac-428b-ac4f-84bb41328d82
+2025-07-28 04:00:26.194 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 66250 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 04:00:26.195 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 04:00:27.131 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 04:00:27.132 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 04:00:27.133 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 04:00:27.195 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.168 seconds (process running for 1.91)
+2025-07-28 04:00:27.480 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 04:00:27.482 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: d6882b99-b93c-4266-8cc0-d329775f9aa0
+2025-07-28 04:01:29.293 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 66302 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 04:01:29.294 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 04:01:30.198 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 04:01:30.198 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 04:01:30.199 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 04:01:30.261 [Test worker] INFO  [c.p.c.p.c.MerchantControllerTest] - Started MerchantControllerTest in 1.12 seconds (process running for 1.869)
+2025-07-28 04:01:30.530 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 04:01:30.533 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: d2c4fe07-64a1-4abc-8e9f-369125fc3e71
+2025-07-28 04:03:00.557 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 66368 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 04:03:00.557 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 04:03:01.473 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 04:03:01.474 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 04:03:01.474 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 04:03:01.534 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.135 seconds (process running for 1.852)
+2025-07-28 04:03:01.812 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 04:03:01.815 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 61979e93-4e31-4d92-b0f7-8e69ac6c7304
+2025-07-28 04:04:11.807 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 66438 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 04:04:11.808 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 04:04:12.706 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 04:04:12.706 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 04:04:12.707 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 04:04:12.766 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.109 seconds (process running for 1.796)
+2025-07-28 04:04:13.042 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 04:04:13.044 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: f4802d85-a64a-42ab-adfd-9a99118a22d0
+2025-07-28 04:04:38.633 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 66460 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 04:04:38.634 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 04:04:39.555 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 04:04:39.555 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 04:04:39.556 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 04:04:39.617 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.136 seconds (process running for 1.84)
+2025-07-28 04:04:39.869 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 04:04:39.872 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 2a8645b7-f161-459b-88fa-dbdf6e28d818
