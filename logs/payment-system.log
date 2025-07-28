@@ -4069,3 +4069,716 @@ WHERE id = ANY(?)
 2025-07-28 08:24:47.950 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
 2025-07-28 08:24:47.958 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
 2025-07-28 08:24:47.960 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 08:33:13.164 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 77869 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 08:33:13.166 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 08:33:14.402 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 08:33:14.402 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 08:33:14.403 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 08:33:14.451 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.476 seconds (process running for 2.769)
+2025-07-28 08:33:14.820 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 08:33:14.825 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 154d9250-9705-47ef-a580-aae201814e82
+2025-07-28 08:49:18.729 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 78637 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 08:49:18.730 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 08:49:19.691 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 08:49:19.691 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 08:49:19.692 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 08:49:19.715 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.153 seconds (process running for 1.924)
+2025-07-28 08:49:20.026 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 08:49:20.029 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: c9748e81-ddca-4d4f-8f68-cf69b31621cd
+2025-07-28 08:51:05.396 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 78729 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 08:51:05.397 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 08:51:07.030 [Test worker] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 08:51:07.067 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.808 seconds (process running for 2.448)
+2025-07-28 08:51:07.097 [Test worker] WARN  [o.s.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.paymentsystem.core.UnitTest.MerchantControllerTest@49bf5ec8]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.paymentsystem.core.UnitTest.MerchantControllerTest': Unsatisfied dependency expressed through field 'webTestClient': No qualifying bean of type 'org.springframework.test.web.reactive.server.WebTestClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:405)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.test.web.reactive.server.WebTestClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2284)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 97 common frames omitted
+2025-07-28 08:52:33.467 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 78827 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 08:52:33.467 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 08:52:34.202 [Test worker] WARN  [o.s.w.c.s.GenericWebApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'settlementController' defined in file [/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main/com/paymentsystem/core/presentation/controllers/SettlementController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-07-28 08:52:34.217 [Test worker] INFO  [o.s.b.a.l.ConditionEvaluationReportLogger] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-28 08:52:34.235 [Test worker] ERROR [o.s.b.d.LoggingFailureAnalysisReporter] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.paymentsystem.core.presentation.controllers.SettlementController required a bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' in your configuration.
+
+2025-07-28 08:52:34.238 [Test worker] WARN  [o.s.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [com.ninjasquad.springmockk.MockkTestExecutionListener] to prepare test instance [com.paymentsystem.core.UnitTest.MerchantControllerTest@5876bed9]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@2591d23a testClass = com.paymentsystem.core.UnitTest.MerchantControllerTest, locations = [], classes = [com.paymentsystem.core.PaymentInitiationSystemApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [MockkContextCustomizer(definitions=[[MockkDefinition@6c1f15df name = [null], typeToMock = com.paymentsystem.core.application.interfaces.CommandBus, extraInterfaces = set[[empty]], clear = AFTER]]), org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@3971f0fe, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@455824ad, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@47ae2cbc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@490522a4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@34fe326d, [ImportsContextCustomizer@5e95b0ab key = [org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientWebSecurityAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.security.saml2.Saml2RelyingPartyAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@186cb891, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7fc7c4a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@4da9f723, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@d00f436a], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at com.ninjasquad.springmockk.MockkTestExecutionListener.postProcessFields(MockkTestExecutionListener.kt:85)
+	at com.ninjasquad.springmockk.MockkTestExecutionListener.injectFields(MockkTestExecutionListener.kt:55)
+	at com.ninjasquad.springmockk.MockkTestExecutionListener.prepareTestInstance(MockkTestExecutionListener.kt:30)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'settlementController' defined in file [/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main/com/paymentsystem/core/presentation/controllers/SettlementController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 94 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2284)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 120 common frames omitted
+2025-07-28 08:52:56.499 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 78856 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 08:52:56.500 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 08:52:57.197 [Test worker] WARN  [o.s.w.c.s.GenericWebApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'settlementController' defined in file [/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main/com/paymentsystem/core/presentation/controllers/SettlementController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-07-28 08:52:57.211 [Test worker] INFO  [o.s.b.a.l.ConditionEvaluationReportLogger] - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-28 08:52:57.228 [Test worker] ERROR [o.s.b.d.LoggingFailureAnalysisReporter] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 1 of constructor in com.paymentsystem.core.presentation.controllers.SettlementController required a bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' in your configuration.
+
+2025-07-28 08:52:57.231 [Test worker] WARN  [o.s.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [com.ninjasquad.springmockk.MockkTestExecutionListener] to prepare test instance [com.paymentsystem.core.UnitTest.MerchantControllerTest@5e95b0ab]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@39e7e040 testClass = com.paymentsystem.core.UnitTest.MerchantControllerTest, locations = [], classes = [com.paymentsystem.core.PaymentInitiationSystemApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [MockkContextCustomizer(definitions=[[MockkDefinition@2591d23a name = [null], typeToMock = com.paymentsystem.core.application.interfaces.CommandBus, extraInterfaces = set[[empty]], clear = AFTER]]), org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@3971f0fe, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@455824ad, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@47ae2cbc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@490522a4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@34fe326d, [ImportsContextCustomizer@6c1f15df key = [org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientWebSecurityAutoConfiguration, org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.security.saml2.Saml2RelyingPartyAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@186cb891, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7fc7c4a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@4da9f723, org.springframework.test.context.support.DynamicPropertiesContextCustomizer@0, org.springframework.boot.test.context.SpringBootTestAnnotation@d00f436a], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at com.ninjasquad.springmockk.MockkTestExecutionListener.postProcessFields(MockkTestExecutionListener.kt:85)
+	at com.ninjasquad.springmockk.MockkTestExecutionListener.injectFields(MockkTestExecutionListener.kt:55)
+	at com.ninjasquad.springmockk.MockkTestExecutionListener.prepareTestInstance(MockkTestExecutionListener.kt:30)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'settlementController' defined in file [/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main/com/paymentsystem/core/presentation/controllers/SettlementController.class]: Unsatisfied dependency expressed through constructor parameter 1: No qualifying bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:144)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:563)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:144)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:110)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 94 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.paymentsystem.core.presentation.mappers.SettlementResponseMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2284)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 120 common frames omitted
+2025-07-28 09:01:03.482 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 79269 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 09:01:03.484 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 09:01:05.138 [Test worker] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 09:01:05.173 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.835 seconds (process running for 2.664)
+2025-07-28 09:01:05.204 [Test worker] WARN  [o.s.test.context.TestContextManager] - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.paymentsystem.core.UnitTest.MerchantControllerTest@25134e01]
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.paymentsystem.core.UnitTest.MerchantControllerTest': Unsatisfied dependency expressed through field 'webTestClient': No qualifying bean of type 'org.springframework.test.web.reactive.server.WebTestClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1459)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:405)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:156)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:111)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:159)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:388)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:382)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:293)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:292)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:281)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:280)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:27)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:112)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:111)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.test.web.reactive.server.WebTestClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2284)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1708)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1628)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 97 common frames omitted
+2025-07-28 09:04:01.250 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 79413 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 09:04:01.251 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 09:04:02.173 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 09:04:02.173 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 09:04:02.174 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 09:04:02.192 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.109 seconds (process running for 1.801)
+2025-07-28 09:04:02.496 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 09:04:02.499 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: be9cd3e5-877b-49cc-9f33-5190cf83432f
+2025-07-28 09:08:00.265 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 79576 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 09:08:00.266 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 09:08:01.180 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 09:08:01.181 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 09:08:01.181 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 09:08:01.198 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.087 seconds (process running for 1.822)
+2025-07-28 09:08:01.500 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 09:08:01.503 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 550571d0-fd23-4b4f-99db-715375bdd2c7
+2025-07-28 09:09:04.304 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 79635 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 09:09:04.304 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 09:09:05.189 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 09:09:05.189 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 09:09:05.190 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 09:09:05.206 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.054 seconds (process running for 1.749)
+2025-07-28 09:09:05.523 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 09:09:05.528 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 0c32a7e5-39ee-4a8b-abd0-1bf00120fa79
+2025-07-28 10:00:46.705 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Starting MerchantControllerTest using Java 17.0.9 with PID 81719 (started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 10:00:46.706 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 10:00:47.687 [Test worker] INFO  [o.s.b.t.m.w.SpringBootMockServletContext] - Initializing Spring TestDispatcherServlet ''
+2025-07-28 10:00:47.687 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Initializing Servlet ''
+2025-07-28 10:00:47.688 [Test worker] INFO  [o.s.t.w.s.TestDispatcherServlet] - Completed initialization in 0 ms
+2025-07-28 10:00:47.708 [Test worker] INFO  [c.p.c.U.MerchantControllerTest] - Started MerchantControllerTest in 1.16 seconds (process running for 2.027)
+2025-07-28 10:00:48.058 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Test Biz, email=test@example.com, settlementAccount=1234567890, balance=1000.00)
+2025-07-28 10:00:48.061 [Test worker @coroutine#3] INFO  [c.p.c.p.c.MerchantController] - Successfully created merchant with ID: 87a8f47a-e235-4159-9cf6-383c7dd02cb3
+2025-07-28 10:11:06.874 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 82108 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 10:11:06.876 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 10:11:06.902 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 10:11:06.903 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 10:11:07.658 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 10:11:07.664 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 10:11:07.664 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-28 10:11:07.682 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 10:11:07.683 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 779 ms
+2025-07-28 10:11:08.156 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 10:11:08.159 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 10:11:08.204 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+2025-07-28 10:11:08.215 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 1.541 seconds (process running for 2.925)
+2025-07-28 10:11:27.553 [http-nio-8080-exec-1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 10:11:27.554 [http-nio-8080-exec-1] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 10:11:27.557 [http-nio-8080-exec-1] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 3 ms
+2025-07-28 10:11:28.054 [http-nio-8080-exec-2] INFO  [o.s.api.AbstractOpenApiResource] - Init duration for springdoc-openapi is: 371 ms
+2025-07-28 10:50:27.189 [SpringApplicationShutdownHook] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-28 10:50:27.238 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
+2025-07-28 10:57:46.231 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 83782 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 10:57:46.236 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 10:57:46.279 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 10:57:46.280 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 10:57:47.089 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 10:57:47.096 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 10:57:47.097 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-28 10:57:47.120 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 10:57:47.120 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 840 ms
+2025-07-28 10:57:47.637 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 10:57:47.639 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 10:57:47.677 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+2025-07-28 10:57:47.687 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 1.716 seconds (process running for 3.555)
+2025-07-28 10:57:48.175 [RMI TCP Connection(3)-127.0.0.1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 10:57:48.175 [RMI TCP Connection(2)-127.0.0.1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 10:57:48.175 [RMI TCP Connection(2)-127.0.0.1] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 10:57:48.176 [RMI TCP Connection(2)-127.0.0.1] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 10:57:48.176 [RMI TCP Connection(3)-127.0.0.1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-07-28 10:57:48.303 [RMI TCP Connection(3)-127.0.0.1] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1731d9f7
+2025-07-28 10:57:48.304 [RMI TCP Connection(3)-127.0.0.1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-07-28 10:57:48.311 [RMI TCP Connection(3)-127.0.0.1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 10:57:56.317 [http-nio-8080-exec-9] INFO  [o.s.api.AbstractOpenApiResource] - Init duration for springdoc-openapi is: 307 ms
+2025-07-28 11:04:34.646 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.MerchantController] - Received CreateMerchantRequest: CreateMerchantRequest(businessName=Victor's Store, email=victor@example.com, settlementAccount=1234567890, balance=10000)
+2025-07-28 11:04:34.648 [http-nio-8080-exec-2] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: CreateMerchantCommand to CreateMerchantCommandHandler
+2025-07-28 11:04:34.652 [http-nio-8080-exec-2] INFO  [c.p.c.a.c.CreateMerchantCommandHandler] - Handling CreateMerchantCommand for email: victor@example.com
+2025-07-28 11:04:34.676 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:04:34.677 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT 1 FROM merchants WHERE email = ? LIMIT 1]
+2025-07-28 11:04:34.677 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:04:34.723 [http-nio-8080-exec-2] WARN  [c.p.c.p.c.MerchantController] - Merchant already exists: Merchant with email victor@example.com already exists
+2025-07-28 11:04:46.114 [http-nio-8080-exec-8] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=5f065369-5939-48f8-90ed-d7a1fb4ff4bc, merchantRef=INV-20250727-009, amount=200, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:04:46.115 [http-nio-8080-exec-8] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:04:46.123 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:04:46.126 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1641378376 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] for JDBC transaction
+2025-07-28 11:04:46.127 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1641378376 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] to manual commit
+2025-07-28 11:04:46.131 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:04:46.131 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1641378376 wrapping org.postgresql.jdbc.PgConnection@1731d9f7]
+2025-07-28 11:04:46.131 [http-nio-8080-exec-8] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1641378376 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] after transaction
+2025-07-28 11:04:46.140 [http-nio-8080-exec-8] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:04:46.140 [http-nio-8080-exec-8] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:04:46.140 [http-nio-8080-exec-8] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:04:46.140 [http-nio-8080-exec-8] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:04:46.150 [http-nio-8080-exec-8] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:04:46.151 [http-nio-8080-exec-8] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:06:23.779 [http-nio-8080-exec-9] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=5f065369-5939-48f8-90ed-d7a1fb4ff4bc, merchantRef=INV-20250727-009, amount=200, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:06:23.780 [http-nio-8080-exec-9] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:06:23.780 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:06:23.781 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@946933492 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] for JDBC transaction
+2025-07-28 11:06:23.781 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@946933492 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] to manual commit
+2025-07-28 11:06:23.782 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:06:23.782 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@946933492 wrapping org.postgresql.jdbc.PgConnection@1731d9f7]
+2025-07-28 11:06:23.782 [http-nio-8080-exec-9] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@946933492 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] after transaction
+2025-07-28 11:06:23.783 [http-nio-8080-exec-9] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:06:23.784 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:06:23.784 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:06:23.784 [http-nio-8080-exec-9] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:06:23.786 [http-nio-8080-exec-9] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:06:23.787 [http-nio-8080-exec-9] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:06:24.926 [http-nio-8080-exec-1] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=5f065369-5939-48f8-90ed-d7a1fb4ff4bc, merchantRef=INV-20250727-009, amount=200, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:06:24.926 [http-nio-8080-exec-1] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:06:24.926 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:06:24.927 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1536274472 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] for JDBC transaction
+2025-07-28 11:06:24.927 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1536274472 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] to manual commit
+2025-07-28 11:06:24.928 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:06:24.928 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1536274472 wrapping org.postgresql.jdbc.PgConnection@1731d9f7]
+2025-07-28 11:06:24.928 [http-nio-8080-exec-1] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1536274472 wrapping org.postgresql.jdbc.PgConnection@1731d9f7] after transaction
+2025-07-28 11:06:24.929 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:06:24.929 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:06:24.929 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:06:24.929 [http-nio-8080-exec-1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:06:24.931 [http-nio-8080-exec-1] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:06:24.931 [http-nio-8080-exec-1] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:06:27.674 [SpringApplicationShutdownHook] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-28 11:06:27.682 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
+2025-07-28 11:06:27.696 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 11:06:27.698 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
+2025-07-28 11:06:32.077 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Starting PaymentInitiationSystemApplicationKt using Java 17.0.9 with PID 84104 (/Users/Otene/Desktop/code/payment-initiation-system/build/classes/kotlin/main started by Otene in /Users/Otene/Desktop/code/payment-initiation-system)
+2025-07-28 11:06:32.078 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - No active profile set, falling back to 1 default profile: "default"
+2025-07-28 11:06:32.117 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-28 11:06:32.117 [restartedMain] INFO  [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-28 11:06:33.009 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat initialized with port 8080 (http)
+2025-07-28 11:06:33.015 [restartedMain] INFO  [o.a.catalina.core.StandardService] - Starting service [Tomcat]
+2025-07-28 11:06:33.015 [restartedMain] INFO  [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-28 11:06:33.045 [restartedMain] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-07-28 11:06:33.045 [restartedMain] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 928 ms
+2025-07-28 11:06:33.555 [restartedMain] INFO  [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2025-07-28 11:06:33.557 [restartedMain] INFO  [o.s.b.a.e.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-07-28 11:06:33.599 [restartedMain] INFO  [o.s.b.w.e.tomcat.TomcatWebServer] - Tomcat started on port 8080 (http) with context path '/'
+2025-07-28 11:06:33.608 [restartedMain] INFO  [c.p.c.PaymentInitiationSystemApplicationKt] - Started PaymentInitiationSystemApplicationKt in 1.746 seconds (process running for 2.945)
+2025-07-28 11:06:33.997 [RMI TCP Connection(4)-127.0.0.1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:06:33.997 [RMI TCP Connection(1)-127.0.0.1] INFO  [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-28 11:06:33.997 [RMI TCP Connection(1)-127.0.0.1] INFO  [o.s.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-07-28 11:06:33.998 [RMI TCP Connection(1)-127.0.0.1] INFO  [o.s.web.servlet.DispatcherServlet] - Completed initialization in 1 ms
+2025-07-28 11:06:33.997 [RMI TCP Connection(4)-127.0.0.1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-07-28 11:06:34.093 [RMI TCP Connection(4)-127.0.0.1] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65f7ce24
+2025-07-28 11:06:34.094 [RMI TCP Connection(4)-127.0.0.1] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-07-28 11:06:34.102 [RMI TCP Connection(4)-127.0.0.1] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:06:39.954 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.TransactionController] - Received InitiateTransactionRequest: InitiateTransactionRequest(merchantId=5f065369-5939-48f8-90ed-d7a1fb4ff4bc, merchantRef=INV-20250727-009, amount=200, currency=NGN, idempotencyKey=idemp-20250727-009)
+2025-07-28 11:06:39.955 [http-nio-8080-exec-2] INFO  [c.p.c.i.SimpleCommandBus] - Dispatching command: InitiateTransactionCommand to InitiateTransactionHandler$$SpringCGLIB$$0
+2025-07-28 11:06:39.958 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Creating new transaction with name [com.paymentsystem.core.application.handlers.InitiateTransactionHandler.handle]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-07-28 11:06:39.960 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Acquired Connection [HikariProxyConnection@1202904767 wrapping org.postgresql.jdbc.PgConnection@65f7ce24] for JDBC transaction
+2025-07-28 11:06:39.961 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Switching JDBC Connection [HikariProxyConnection@1202904767 wrapping org.postgresql.jdbc.PgConnection@65f7ce24] to manual commit
+2025-07-28 11:06:39.964 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Initiating transaction commit
+2025-07-28 11:06:39.964 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Committing JDBC transaction on Connection [HikariProxyConnection@1202904767 wrapping org.postgresql.jdbc.PgConnection@65f7ce24]
+2025-07-28 11:06:39.964 [http-nio-8080-exec-2] DEBUG [o.s.j.support.JdbcTransactionManager] - Releasing JDBC Connection [HikariProxyConnection@1202904767 wrapping org.postgresql.jdbc.PgConnection@65f7ce24] after transaction
+2025-07-28 11:06:39.982 [http-nio-8080-exec-2] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Searching for transaction by idempotencyKey = idemp-20250727-009
+2025-07-28 11:06:39.984 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL query
+2025-07-28 11:06:39.984 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.core.JdbcTemplate] - Executing prepared SQL statement [SELECT * FROM transactions 
+WHERE idempotency_key = ?]
+2025-07-28 11:06:39.984 [http-nio-8080-exec-2] DEBUG [o.s.jdbc.datasource.DataSourceUtils] - Fetching JDBC Connection from DataSource
+2025-07-28 11:06:40.002 [http-nio-8080-exec-2] INFO  [c.p.c.i.r.PostgresTransactionRepository] - Transaction fetched: ID = c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:06:40.006 [http-nio-8080-exec-2] INFO  [c.p.c.p.c.TransactionController] - Transaction successfully initiated with ID: c027a3b6-3bb0-42c1-bf3b-a719e18d60d3
+2025-07-28 11:06:48.292 [SpringApplicationShutdownHook] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-28 11:06:48.300 [tomcat-shutdown] INFO  [o.s.b.w.e.tomcat.GracefulShutdown] - Graceful shutdown complete
+2025-07-28 11:06:48.323 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown initiated...
+2025-07-28 11:06:48.324 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Shutdown completed.
