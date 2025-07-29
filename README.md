@@ -55,11 +55,9 @@ and give room for easy modification of business rules
 - Caching with Redis.
 - Grafana/Prometheus for metrics
 - Elasticsearch/Kibana for centralized logging
-- Observability stack: Grafana, Prometheus, Elasticsearch.
 - Health checks and circuit breakers.
-- Assumed deployment behind API Gateway, K8s, and Load Balancer with decryption handled upstream.
 - Microservice Context: Assumes deployment within a microservice architecture, leveraging external components like:
   - Load balancers (e.g., Kubernetes) for scalability.
   - API Gateways for security (decryption, rate limiting) and routing.
   - Dedicated external notification and fund transfer services.
-  - An external authentication service.# payment-initiation-system
+  - An external authentication service.
